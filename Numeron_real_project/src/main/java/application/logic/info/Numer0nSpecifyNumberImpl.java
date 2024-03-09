@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -710,10 +711,10 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 	private boolean judgeHighLowTF(ArrayList<String> numList, ArrayList<String> itemList) {
 		boolean tf = true;
 
-		Integer zero = Anything.convertStringToInteger(Const.ZERO);
-		Integer four = Anything.convertStringToInteger(Const.FOUR);
-		Integer five = Anything.convertStringToInteger(Const.FIVE);
-		Integer nine = Anything.convertStringToInteger(Const.NINE);
+		Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+		Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+		Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+		Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 
 		for (int i = 0; i < numList.size(); i++) {
 			Integer num = Anything.convertStringToInteger(numList.get(i));
@@ -749,10 +750,10 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 			return Const.NOT_CLEAR;
 		}
 
-		Integer zero = Anything.convertStringToInteger(Const.ZERO);
-		Integer four = Anything.convertStringToInteger(Const.FOUR);
-		Integer five = Anything.convertStringToInteger(Const.FIVE);
-		Integer nine = Anything.convertStringToInteger(Const.NINE);
+		Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+		Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+		Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+		Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 
 		// 数字を調べどこかの桁にHIGHorLOWが混じっていたらOK
 		boolean tf = false;

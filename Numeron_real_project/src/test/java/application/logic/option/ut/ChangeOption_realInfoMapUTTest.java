@@ -15,6 +15,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.logic.human.GameMaster;
 import application.logic.option.ChangeOption;
@@ -74,7 +75,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.TWO, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.TWO.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -126,7 +127,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.SIX, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.SIX.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.TWO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -228,7 +229,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.TWO, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.TWO.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -280,7 +281,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.SIX, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.SIX.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.TWO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -382,7 +383,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.TWO, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.TWO.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -434,7 +435,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.SIX, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.SIX.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.TWO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -536,8 +537,8 @@ public class ChangeOption_realInfoMapUTTest {
 		ChangeOptionMapUtil mapUtil = spy(new ChangeOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.SIX, Const.SAI_YUUSEN_FLAG);
-		mapUtil.addSelectNumberPriorityMap(Const.EIGHT, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.SIX.getNum(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.EIGHT.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.TWO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -693,7 +694,7 @@ public class ChangeOption_realInfoMapUTTest {
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
 		mapUtil.addDoPriorityMap(Const.CHANGE_GO, Const.SAI_YUUSEN_FLAG);
-		mapUtil.addSelectNumberPriorityMap(Const.TWO, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.TWO.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
@@ -801,10 +802,11 @@ public class ChangeOption_realInfoMapUTTest {
 		for (int i = 0; i < list.size(); i++) {
 			String hl = null;
 			Integer num = Integer.parseInt(list.get(i));
-			if (0 <= num.compareTo(Integer.parseInt(Const.ZERO)) && 0 >= num.compareTo(Integer.parseInt(Const.FOUR))) {
+			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) &&
+					0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
 				hl = Const.LOW;
-			} else if (0 <= num.compareTo(Integer.parseInt(Const.FIVE))
-					&& 0 >= num.compareTo(Integer.parseInt(Const.NINE))) {
+			} else if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FIVE.getNum()))
+					&& 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.NINE.getNum()))) {
 				hl = Const.HIGH;
 			}
 			hlList.add(hl);

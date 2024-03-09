@@ -8,6 +8,7 @@ import java.util.Collections;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.logic.human.GameMaster;
 import application.logic.judge.Eatbite;
 
@@ -296,10 +297,10 @@ public class Numer0nSpecifyNumberUtil {
 
 			boolean highLowTf = true;
 			for (int i = 0; i < resultNumberList.size(); i++) {
-				Integer zero = Anything.convertStringToInteger(Const.ZERO);
-				Integer four = Anything.convertStringToInteger(Const.FOUR);
-				Integer five = Anything.convertStringToInteger(Const.FIVE);
-				Integer nine = Anything.convertStringToInteger(Const.NINE);
+				Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+				Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 
 				for (int j = 0; j < resultNumberList.get(i).length(); j++) {
 					Integer num = Anything.convertStringToInteger(resultNumberList.get(i)
@@ -334,10 +335,10 @@ public class Numer0nSpecifyNumberUtil {
 			highLowTf = false;
 			int allCount = 0;
 			for (int i = 0; i < resultNumberList.size(); i++) {
-				Integer zero = Anything.convertStringToInteger(Const.ZERO);
-				Integer four = Anything.convertStringToInteger(Const.FOUR);
-				Integer five = Anything.convertStringToInteger(Const.FIVE);
-				Integer nine = Anything.convertStringToInteger(Const.NINE);
+				Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+				Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 
 				int count = 0;
 				for (int j = 0; j < resultNumberList.get(i).length(); j++) {
@@ -383,10 +384,10 @@ public class Numer0nSpecifyNumberUtil {
 			ArrayList<String> chklist = Anything.splitComma(chkNumber);
 			for (int i = 0; i < resultNumberList.size(); i++) {
 				ArrayList<String> list = Anything.convertNumberToArrayList(resultNumberList.get(i));
-				Integer zero = Anything.convertStringToInteger(Const.ZERO);
-				Integer four = Anything.convertStringToInteger(Const.FOUR);
-				Integer five = Anything.convertStringToInteger(Const.FIVE);
-				Integer nine = Anything.convertStringToInteger(Const.NINE);
+				Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+				Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 				String hl = chklist.get(1);
 				if (!Const.DONT_TEACH_INDEX.equals(chklist.get(0))) {
 					String chk = list.get(Anything.convertStringToInteger(chklist.get(0)));
@@ -449,10 +450,10 @@ public class Numer0nSpecifyNumberUtil {
 			chklist = Anything.splitComma(chkNumber);
 			for (int i = 0; i < resultNumberList.size(); i++) {
 				ArrayList<String> list = Anything.convertNumberToArrayList(resultNumberList.get(i));
-				Integer zero = Anything.convertStringToInteger(Const.ZERO);
-				Integer four = Anything.convertStringToInteger(Const.FOUR);
-				Integer five = Anything.convertStringToInteger(Const.FIVE);
-				Integer nine = Anything.convertStringToInteger(Const.NINE);
+				Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+				Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 				String hl = chklist.get(1);
 				if (!Const.DONT_TEACH_INDEX.equals(chklist.get(0))) {
 					String chk = list.get(Anything.convertStringToInteger(chklist.get(0)));

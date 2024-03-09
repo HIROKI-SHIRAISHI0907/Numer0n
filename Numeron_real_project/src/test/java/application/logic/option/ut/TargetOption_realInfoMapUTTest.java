@@ -15,6 +15,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.logic.human.GameMaster;
 import application.logic.option.TargetOption;
 import application.logic.option.map.TargetOptionMapUtil;
@@ -206,7 +207,7 @@ public class TargetOption_realInfoMapUTTest {
 		// MapUtil
 		TargetOptionMapUtil mapUtil = spy(new TargetOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.FOUR, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.FOUR.getNum(), Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 検証
 		String result = this.testSuite.targetLogic();
@@ -252,7 +253,7 @@ public class TargetOption_realInfoMapUTTest {
 		// MapUtil
 		TargetOptionMapUtil mapUtil = spy(new TargetOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.NINE, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 検証
 		String result = this.testSuite.targetLogic();
@@ -299,7 +300,7 @@ public class TargetOption_realInfoMapUTTest {
 		// MapUtil
 		TargetOptionMapUtil mapUtil = spy(new TargetOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Const.FIVE, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.FIVE.getNum(), Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 検証
 		String result = this.testSuite.targetLogic();

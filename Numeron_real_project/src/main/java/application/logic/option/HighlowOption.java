@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponent;
 import application.logic.human.GameMaster;
 import lombok.Getter;
@@ -84,10 +85,10 @@ public class HighlowOption {
 		for (int i = 0; i < numList.size(); i++) {
 			String hl = null;
 			Integer num = Integer.parseInt(numList.get(i));
-			if (0 <= num.compareTo(Integer.parseInt(Const.ZERO)) && 0 >= num.compareTo(Integer.parseInt(Const.FOUR))) {
+			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) && 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
 				hl = Const.LOW;
-			} else if (0 <= num.compareTo(Integer.parseInt(Const.FIVE))
-					&& 0 >= num.compareTo(Integer.parseInt(Const.NINE))) {
+			} else if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FIVE.getNum()))
+					&& 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.NINE.getNum()))) {
 				hl = Const.HIGH;
 			} else {
 				throw this.exceptionComponent.createNumer0nUncontinuableException(S_FUNC, CLASS_NAME, METHOD_NAME, null,

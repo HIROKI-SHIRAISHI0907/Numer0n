@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
 import application.logic.human.GameMaster;
@@ -366,10 +367,10 @@ public class ChangeOption {
 
 		boolean tf = false;
 		// どちらも0~4の間か
-		Integer zero = Integer.parseInt(Const.ZERO);
-		Integer four = Integer.parseInt(Const.FOUR);
-		Integer five = Integer.parseInt(Const.FIVE);
-		Integer nine = Integer.parseInt(Const.NINE);
+		Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+		Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+		Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+		Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 		Integer exchangeNums = Integer.parseInt(exchangeNum);
 		Integer isExchangeNums = Integer.parseInt(isExchangeNum);
 		if ((0 <= exchangeNums.compareTo(zero) && 0 >= exchangeNums.compareTo(four)) &&
@@ -405,10 +406,10 @@ public class ChangeOption {
 	private String judgeLowHighNumber(String num) throws Numer0nUncontinuableException {
 		final String METHOD_NAME = "judgeLowHighNumber";
 
-		Integer zero = Integer.parseInt(Const.ZERO);
-		Integer four = Integer.parseInt(Const.FOUR);
-		Integer five = Integer.parseInt(Const.FIVE);
-		Integer nine = Integer.parseInt(Const.NINE);
+		Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
+		Integer four = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FOUR.getNum());
+		Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
+		Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 		Integer nums = Integer.parseInt(num);
 		if (0 <= nums.compareTo(zero) && 0 >= nums.compareTo(four)) {
 			return Const.LOW;

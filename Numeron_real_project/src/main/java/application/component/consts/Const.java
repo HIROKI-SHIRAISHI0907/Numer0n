@@ -1,8 +1,5 @@
 package application.component.consts;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Const {
 
 	// CPU
@@ -79,33 +76,8 @@ public class Const {
 	public static final int Numer0n_CONTINUE = 0;
 	public static final int Numer0n_GAMEOVER = 1;
 
-	// 数字
-	public static final String ZERO = "0";
-	public static final String ONE = "1";
-	public static final String TWO = "2";
-	public static final String THREE = "3";
-	public static final String FOUR = "4";
-	public static final String FIVE = "5";
-	public static final String SIX = "6";
-	public static final String SEVEN = "7";
-	public static final String EIGHT = "8";
-	public static final String NINE = "9";
-
 	// 空文字
 	public static final String EMPTY = "";
-
-	// 数字のリスト
-	public static ArrayList<String> allNumList = new ArrayList<String>(Arrays.asList(
-			Const.ZERO,
-			Const.ONE,
-			Const.TWO,
-			Const.THREE,
-			Const.FOUR,
-			Const.FIVE,
-			Const.SIX,
-			Const.SEVEN,
-			Const.EIGHT,
-			Const.NINE));
 
 	// 桁
 	public static final int ZERO_D = 0;

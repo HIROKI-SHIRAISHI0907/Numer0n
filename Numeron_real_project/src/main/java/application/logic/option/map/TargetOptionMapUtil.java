@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 
 /**
  * TargetOptionにて使用する最優先フラグを管理するクラス
@@ -25,16 +25,16 @@ public class TargetOptionMapUtil {
 	public static final Map<String, Integer> TARGET_SELECT_NUMBER_PRIORITY_MAP;
 	static {
 		Map<String, Integer> targetSelectNumberYuusenMap = new HashMap<String, Integer>();
-		targetSelectNumberYuusenMap.put(Const.ZERO, null);
-		targetSelectNumberYuusenMap.put(Const.ONE, null);
-		targetSelectNumberYuusenMap.put(Const.TWO, null);
-		targetSelectNumberYuusenMap.put(Const.THREE, null);
-		targetSelectNumberYuusenMap.put(Const.FOUR, null);
-		targetSelectNumberYuusenMap.put(Const.FIVE, null);
-		targetSelectNumberYuusenMap.put(Const.SIX, null);
-		targetSelectNumberYuusenMap.put(Const.SEVEN, null);
-		targetSelectNumberYuusenMap.put(Const.EIGHT, null);
-		targetSelectNumberYuusenMap.put(Const.NINE, null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.ZERO.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.ONE.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.TWO.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.THREE.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.FOUR.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.FIVE.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.SIX.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.SEVEN.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.EIGHT.getNum(), null);
+		targetSelectNumberYuusenMap.put(Numer0nSelectNumberEnum.NINE.getNum(), null);
 
 		TARGET_SELECT_NUMBER_PRIORITY_MAP = targetSelectNumberYuusenMap;
 	};
