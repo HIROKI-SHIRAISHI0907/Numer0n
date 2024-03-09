@@ -49,6 +49,16 @@ public class CommonOptionUTTest {
 	private static final String PLAYER = "PLAYER";
 
 	/**
+	 * Numer0n続行
+	 */
+	private static final Integer Numer0n_CONTINUE = 0;
+
+	/**
+	 * Numer0n終了
+	 */
+	private static final Integer Numer0n_GAMEOVER = 1;
+
+	/**
 	 * gameMaster mock
 	 */
 	@Mock
@@ -159,7 +169,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.DOUBLE));
+		Integer value = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -184,7 +195,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
 		// 検証
-		assertEquals(Const.Numer0n_GAMEOVER, this.testSuite.summarizeOption(Const.DOUBLE));
+		Integer value = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_GAMEOVER, value);
 	}
 
 	/**
@@ -206,7 +218,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.HIGH_LOW));
+		Integer value = this.testSuite.summarizeOption(Const.HIGH_LOW);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -228,7 +241,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SLASH));
+		Integer value = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -250,7 +264,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.TARGET));
+		Integer value = this.testSuite.summarizeOption(Const.TARGET);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -272,7 +287,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.CHANGE));
+		Integer value = this.testSuite.summarizeOption(Const.CHANGE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -294,7 +310,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SLASH));
+		Integer value = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -316,7 +333,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SHUFFLE));
+		Integer value = this.testSuite.summarizeOption(Const.SHUFFLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -341,7 +359,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.DOUBLE));
+		Integer value = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -366,7 +385,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
 		// 検証
-		assertEquals(Const.Numer0n_GAMEOVER, this.testSuite.summarizeOption(Const.DOUBLE));
+		Integer value = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_GAMEOVER, value);
 	}
 
 	/**
@@ -388,7 +408,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.HIGH_LOW));
+		Integer value = this.testSuite.summarizeOption(Const.HIGH_LOW);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -410,7 +431,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SLASH));
+		Integer value = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -434,7 +456,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.targetOption.getExistsInd()).thenReturn(2);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.TARGET));
+		Integer value = this.testSuite.summarizeOption(Const.TARGET);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -458,7 +481,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.changeOption.getDigitInd()).thenReturn(1);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.CHANGE));
+		Integer value = this.testSuite.summarizeOption(Const.CHANGE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -480,7 +504,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SLASH));
+		Integer value = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -502,7 +527,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SHUFFLE));
+		Integer value = this.testSuite.summarizeOption(Const.SHUFFLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -526,7 +552,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.targetOption.getExistsInd()).thenReturn(-1);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.TARGET));
+		Integer value = this.testSuite.summarizeOption(Const.TARGET);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -550,7 +577,8 @@ public class CommonOptionUTTest {
 		// mock
 		when(this.changeOption.getDigitInd()).thenReturn(-1);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.CHANGE));
+		Integer value = this.testSuite.summarizeOption(Const.CHANGE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -573,7 +601,8 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SHUFFLE));
+		Integer value = this.testSuite.summarizeOption(Const.SHUFFLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 	/**
@@ -595,10 +624,11 @@ public class CommonOptionUTTest {
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
-		
+
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SHUFFLE));
+		Integer value = this.testSuite.summarizeOption(Const.SHUFFLE);
+		assertEquals(Numer0n_CONTINUE, value);
 	}
 
 }

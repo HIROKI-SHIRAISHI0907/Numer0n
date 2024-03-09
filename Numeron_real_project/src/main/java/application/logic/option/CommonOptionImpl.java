@@ -18,6 +18,16 @@ import lombok.RequiredArgsConstructor;
 public class CommonOptionImpl implements CommonOption {
 
 	/**
+	 * Numer0n続行
+	 */
+	private static final Integer Numer0n_CONTINUE = 0;
+
+	/**
+	 * Numer0n終了
+	 */
+	private static final Integer Numer0n_GAMEOVER = 1;
+
+	/**
 	 * GameMaster
 	 */
 	private final GameMaster gameMaster;
@@ -114,6 +124,7 @@ public class CommonOptionImpl implements CommonOption {
 				break;
 			case Const.CHANGE:
 				changeOption.changeLogic();
+				// -1が返却された場合、D'ont teach indexを連結
 				teachStr = (-1 == this.changeOption.getDigitInd())
 						? Const.DONT_TEACH_INDEX : Anything.convertIntegerToString(this.changeOption.getDigitInd());
 				if (Const.CPU.equals(this.gameMaster.getName())) {
@@ -141,8 +152,8 @@ public class CommonOptionImpl implements CommonOption {
 
 		// 当てられた場合試合終了（DOUBLEの場合に限る）
 		if (gameOver) {
-			return Const.Numer0n_GAMEOVER;
+			return Numer0n_GAMEOVER;
 		}
-		return Const.Numer0n_CONTINUE;
+		return Numer0n_CONTINUE;
 	}
 }

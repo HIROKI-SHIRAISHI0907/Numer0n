@@ -56,6 +56,16 @@ public class CommonOption_realInfoMapUTTest {
 	private static final String PLAYER = "PLAYER";
 
 	/**
+	 * Numer0n続行
+	 */
+	private static final Integer Numer0n_CONTINUE = 0;
+
+	/**
+	 * Numer0n終了
+	 */
+	private static final Integer Numer0n_GAMEOVER = 1;
+
+	/**
 	 * GameComponentUtil
 	 */
 	@Mock
@@ -124,8 +134,8 @@ public class CommonOption_realInfoMapUTTest {
 		DoubleOption doubleOption = spy(new DoubleOption(gameMaster, mapUtil, computer, player, eatBite, info));
 		ReflectionTestUtils.setField(this.testSuite, "doubleOption", doubleOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.DOUBLE);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("DOUBLE,750,0EAT0BITE");
 		playerInfoList.add("DOUBLE,123,2EAT0BITE");
@@ -191,8 +201,8 @@ public class CommonOption_realInfoMapUTTest {
 		DoubleOption doubleOption = spy(new DoubleOption(gameMaster, mapUtil, computer, player, eatBite, info));
 		ReflectionTestUtils.setField(this.testSuite, "doubleOption", doubleOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.DOUBLE);
-		assertEquals(Const.Numer0n_GAMEOVER, result);
+		Integer result = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_GAMEOVER, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("DOUBLE,750,0EAT0BITE");
 		playerInfoList.add("DOUBLE,123,3EAT0BITE");
@@ -242,8 +252,8 @@ public class CommonOption_realInfoMapUTTest {
 		HighlowOption highlowOption = spy(new HighlowOption(gameMaster, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "highlowOption", highlowOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.HIGH_LOW);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.HIGH_LOW);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("HIGH&LOW,HIGH,LOW,LOW");
 		assertEquals(playerInfoList, info.getPlayerInfoList());
@@ -292,8 +302,8 @@ public class CommonOption_realInfoMapUTTest {
 		SlashOption slashOption = spy(new SlashOption(gameMaster, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "slashOption", slashOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.SLASH);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("SLASH,3");
 		assertEquals(playerInfoList, info.getPlayerInfoList());
@@ -344,8 +354,8 @@ public class CommonOption_realInfoMapUTTest {
 		TargetOption targetOption = spy(new TargetOption(gameMaster, mapUtil));
 		ReflectionTestUtils.setField(this.testSuite, "targetOption", targetOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.TARGET);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.TARGET);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,5");
 		assertEquals(playerInfoList, info.getPlayerInfoList());
@@ -402,8 +412,8 @@ public class CommonOption_realInfoMapUTTest {
 		ChangeOption changeOption = spy(new ChangeOption(gameMaster, mapUtil, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "changeOption", changeOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.CHANGE);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.CHANGE);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(info.getCpuInfoList().get(0).contains("CHANGE"));
 		assertTrue(info.getPlayerInfoList().size() == 0);
 	}
@@ -454,8 +464,8 @@ public class CommonOption_realInfoMapUTTest {
 		ShuffleOption shuffleOption = spy(new ShuffleOption(gameMaster, mapUtil, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "shuffleOption", shuffleOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.SHUFFLE);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.SHUFFLE);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(info.getPlayerInfoList().size() == 0);
 	}
 
@@ -516,8 +526,8 @@ public class CommonOption_realInfoMapUTTest {
 		DoubleOption doubleOption = spy(new DoubleOption(gameMaster, mapUtil, computer, player, eatBite, info));
 		ReflectionTestUtils.setField(this.testSuite, "doubleOption", doubleOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.DOUBLE);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> cpuInfoList = new ArrayList<String>();
 		cpuInfoList.add("DOUBLE,750,0EAT0BITE");
 		cpuInfoList.add("DOUBLE,123,2EAT0BITE");
@@ -581,8 +591,8 @@ public class CommonOption_realInfoMapUTTest {
 		DoubleOption doubleOption = spy(new DoubleOption(gameMaster, mapUtil, computer, player, eatBite, info));
 		ReflectionTestUtils.setField(this.testSuite, "doubleOption", doubleOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.DOUBLE);
-		assertEquals(Const.Numer0n_GAMEOVER, result);
+		Integer result = this.testSuite.summarizeOption(Const.DOUBLE);
+		assertEquals(Numer0n_GAMEOVER, result);
 		ArrayList<String> cpuInfoList = new ArrayList<String>();
 		cpuInfoList.add("DOUBLE,750,0EAT0BITE");
 		cpuInfoList.add("DOUBLE,123,3EAT0BITE");
@@ -632,8 +642,8 @@ public class CommonOption_realInfoMapUTTest {
 		HighlowOption highlowOption = spy(new HighlowOption(gameMaster, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "highlowOption", highlowOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.HIGH_LOW);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.HIGH_LOW);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> cpuInfoList = new ArrayList<String>();
 		cpuInfoList.add("HIGH&LOW,HIGH,LOW,LOW");
 		assertEquals(cpuInfoList, info.getCpuInfoList());
@@ -682,8 +692,8 @@ public class CommonOption_realInfoMapUTTest {
 		SlashOption slashOption = spy(new SlashOption(gameMaster, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "slashOption", slashOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.SLASH);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.SLASH);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> cpuInfoList = new ArrayList<String>();
 		cpuInfoList.add("SLASH,3");
 		assertEquals(cpuInfoList, info.getCpuInfoList());
@@ -734,8 +744,8 @@ public class CommonOption_realInfoMapUTTest {
 		TargetOption targetOption = spy(new TargetOption(gameMaster, mapUtil));
 		ReflectionTestUtils.setField(this.testSuite, "targetOption", targetOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.TARGET);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.TARGET);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> cpuInfoList = new ArrayList<String>();
 		cpuInfoList.add("TARGET,2,EXISTLISTOFNUMBER,9");
 		assertEquals(cpuInfoList, info.getCpuInfoList());
@@ -792,8 +802,8 @@ public class CommonOption_realInfoMapUTTest {
 		ChangeOption changeOption = spy(new ChangeOption(gameMaster, mapUtil, exceptionComponent));
 		ReflectionTestUtils.setField(this.testSuite, "changeOption", changeOption);
 		// 検証
-		int result = this.testSuite.summarizeOption(Const.CHANGE);
-		assertEquals(Const.Numer0n_CONTINUE, result);
+		Integer result = this.testSuite.summarizeOption(Const.CHANGE);
+		assertEquals(Numer0n_CONTINUE, result);
 		ArrayList<String> playerInfoList = new ArrayList<String>();
 		playerInfoList.add("CHANGE,0,HIGH");
 		assertEquals(playerInfoList, info.getPlayerInfoList());

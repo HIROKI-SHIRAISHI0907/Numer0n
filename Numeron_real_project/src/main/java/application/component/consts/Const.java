@@ -72,10 +72,6 @@ public class Const {
 	// NO_OPTION定数（オプションを使用しない）
 	public static final String NO_OPTION = "NOOPTION";
 
-	// 戦いを続ける続けない
-	public static final int Numer0n_CONTINUE = 0;
-	public static final int Numer0n_GAMEOVER = 1;
-
 	// 空文字
 	public static final String EMPTY = "";
 
@@ -86,10 +82,6 @@ public class Const {
 	public static final String EXHAUSTED = "EXHAUSTED";
 	public static final String INSANE = "INSANE";
 
-	// NULL定数
-	public static final String NULL = "NULL";
-	// NOTHING定数
-	public static final String NOTHING = "NOTHING";
 	// 対象外の桁やフラグ
 	public static final int YUUSEN_MINUS = -1;
 	// 最優先
