@@ -110,8 +110,7 @@ public class Numer0nUTTest {
 		SlashOption slashOption = spy(new SlashOption(gameMaster, exceptionComponent));
 		TargetOptionMapUtil targetMapUtil = spy(new TargetOptionMapUtil());
 		TargetOption targetOption = spy(new TargetOption(gameMaster, targetMapUtil));
-		CommonOptionImpl option = spy(new CommonOptionImpl(
-				gameMaster, player, computer, info, null,
+		CommonOptionImpl option = spy(new CommonOptionImpl(gameMaster, info,
 				changeOption, doubleOption, highlowOption, shuffleOption, slashOption, targetOption));
 		ReflectionTestUtils.setField(this.testSuite, "option", option);
 

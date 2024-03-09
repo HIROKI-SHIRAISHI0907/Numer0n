@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 
 /**
@@ -50,11 +51,11 @@ public class ChangeOptionMapUtil {
 	public static final Map<Integer, Integer> CHANGE_DIGIT_PRIORITY_MAP;
 	static {
 		Map<Integer, Integer> changeDigitYuusenMap = new HashMap<Integer, Integer>();
-		changeDigitYuusenMap.put(Const.ZERO_D, null);
-		changeDigitYuusenMap.put(Const.ONE_D, null);
-		changeDigitYuusenMap.put(Const.TWO_D, null);
-		changeDigitYuusenMap.put(Const.THREE_D, null);
-		changeDigitYuusenMap.put(Const.FOUR_D, null);
+		changeDigitYuusenMap.put(Numer0nDigitEnum.ZEROD.getDigit(), null);
+		changeDigitYuusenMap.put(Numer0nDigitEnum.ONED.getDigit(), null);
+		changeDigitYuusenMap.put(Numer0nDigitEnum.TWOD.getDigit(), null);
+		changeDigitYuusenMap.put(Numer0nDigitEnum.THREED.getDigit(), null);
+		changeDigitYuusenMap.put(Numer0nDigitEnum.FOURD.getDigit(), null);
 
 		CHANGE_DIGIT_PRIORITY_MAP = changeDigitYuusenMap;
 	};

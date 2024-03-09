@@ -1,7 +1,7 @@
 package application.component.consts;
 
 /**
- * Numer0nゲームで使用する桁(0〜4(10000~1の位)),0〜9までの数字のEnum
+ * Numer0nゲームで使用する0〜9までの数字のEnum
  * @author shiraishitoshio
  *
  */

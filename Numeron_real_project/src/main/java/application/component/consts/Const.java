@@ -79,13 +79,6 @@ public class Const {
 	// 空文字
 	public static final String EMPTY = "";
 
-	// 桁
-	public static final int ZERO_D = 0;
-	public static final int ONE_D = 1;
-	public static final int TWO_D = 2;
-	public static final int THREE_D = 3;
-	public static final int FOUR_D = 4;
-
 	// 難易度
 	public static final String EASY = "EASY";
 	public static final String NORMAL = "NORMAL";

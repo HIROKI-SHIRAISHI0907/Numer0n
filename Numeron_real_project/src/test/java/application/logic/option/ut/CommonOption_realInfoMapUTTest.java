@@ -16,6 +16,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.logic.human.Computer;
@@ -99,7 +100,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		DoubleOptionMapUtil mapUtil = spy(new DoubleOptionMapUtil());
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDigitPriorityMap(Const.ONE_D, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), Const.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -386,7 +387,7 @@ public class CommonOption_realInfoMapUTTest {
 		mapUtil.clearDigitPriorityMap();
 		mapUtil.addDoPriorityMap(Const.CHANGE_GO, Const.SAI_YUUSEN_FLAG);
 		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -491,7 +492,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		DoubleOptionMapUtil mapUtil = spy(new DoubleOptionMapUtil());
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDigitPriorityMap(Const.ONE_D, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), Const.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -776,7 +777,7 @@ public class CommonOption_realInfoMapUTTest {
 		mapUtil.clearDigitPriorityMap();
 		mapUtil.addDoPriorityMap(Const.CHANGE_GO, Const.SAI_YUUSEN_FLAG);
 		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);

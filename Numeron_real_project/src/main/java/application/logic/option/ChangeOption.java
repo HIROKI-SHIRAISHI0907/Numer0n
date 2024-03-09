@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
@@ -119,9 +120,9 @@ public class ChangeOption {
 				if (changeFlag) {
 					// 現在勝負している桁数に応じて初期化（YUUSEN_MINUS→対象外の桁）
 					if (this.gameMaster.getDigit() < 5) {
-						this.mapUtil.addDigitPriorityMap(Const.FOUR_D, Const.YUUSEN_MINUS);
+						this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.FOURD.getDigit(), Const.YUUSEN_MINUS);
 						if (this.gameMaster.getDigit() == 3) {
-							this.mapUtil.addDigitPriorityMap(Const.THREE_D, Const.YUUSEN_MINUS);
+							this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.THREED.getDigit(), Const.YUUSEN_MINUS);
 						}
 					}
 

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import application.component.consts.Const;
+import application.component.consts.Numer0nDigitEnum;
 
 /**
  * TargetOptionにて使用する最優先フラグを管理するクラス
@@ -25,11 +25,11 @@ public class DoubleOptionMapUtil {
 	public static final Map<Integer, Integer> DOUBLE_DIGIT_PRIORITY_MAP;
 	static {
 		Map<Integer, Integer> doubleDigitYuusenMap = new HashMap<Integer, Integer>();
-		doubleDigitYuusenMap.put(Const.ZERO_D, null);
-		doubleDigitYuusenMap.put(Const.ONE_D, null);
-		doubleDigitYuusenMap.put(Const.TWO_D, null);
-		doubleDigitYuusenMap.put(Const.THREE_D, null);
-		doubleDigitYuusenMap.put(Const.FOUR_D, null);
+		doubleDigitYuusenMap.put(Numer0nDigitEnum.ZEROD.getDigit(), null);
+		doubleDigitYuusenMap.put(Numer0nDigitEnum.ONED.getDigit(), null);
+		doubleDigitYuusenMap.put(Numer0nDigitEnum.TWOD.getDigit(), null);
+		doubleDigitYuusenMap.put(Numer0nDigitEnum.THREED.getDigit(), null);
+		doubleDigitYuusenMap.put(Numer0nDigitEnum.FOURD.getDigit(), null);
 
 		DOUBLE_DIGIT_PRIORITY_MAP = doubleDigitYuusenMap;
 	};
