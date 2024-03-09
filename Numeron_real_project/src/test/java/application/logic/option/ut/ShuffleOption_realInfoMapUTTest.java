@@ -51,10 +51,9 @@ public class ShuffleOption_realInfoMapUTTest {
 	@Test
 	final void shuffleOption_realInfoMap_normal01Test() throws Exception {
 		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
-		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -88,9 +87,9 @@ public class ShuffleOption_realInfoMapUTTest {
 	@Test
 	final void shuffleOption_realInfoMap_normal02Test() throws Exception {
 		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -124,9 +123,9 @@ public class ShuffleOption_realInfoMapUTTest {
 	@Test
 	final void shuffleOption_realInfoMap_normal03Test() throws Exception {
 		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.HARD);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -160,9 +159,9 @@ public class ShuffleOption_realInfoMapUTTest {
 	@Test
 	final void shuffleOption_realInfoMap_normal04Test() throws Exception {
 		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -195,11 +194,10 @@ public class ShuffleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void shuffleOption_realInfoMap_normal05Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -233,11 +231,10 @@ public class ShuffleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void shuffleOption_realInfoMap_normal06Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
@@ -271,11 +268,10 @@ public class ShuffleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void shuffleOption_realInfoMap_normal07Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());

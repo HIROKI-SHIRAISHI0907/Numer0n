@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
+import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponent;
@@ -52,18 +53,6 @@ public class HighlowOption {
 	 */
 	private ArrayList<String> highLowList;
 
-	//	/**
-	//	 * 0〜4ならLOW、5~9ならHIGHを返す
-	//	 * @param playerCPU playerorCPU名
-	//	 * @param difficulty 難易度
-	//	 * @param gameMaster GameMasterオブジェクト
-	//	 */
-	//	public HighlowOption(String playerCPU, GameMaster gameMaster) {
-	//		// 名前を一時保管
-	//		this.mem = playerCPU;
-	//		this.gameMaster = gameMaster;
-	//	}
-
 	/**
 	 * highLowクラス
 	 * @return
@@ -84,28 +73,28 @@ public class HighlowOption {
 		ArrayList<String> hlList = new ArrayList<String>();
 		for (int i = 0; i < numList.size(); i++) {
 			String hl = null;
-			Integer num = Integer.parseInt(numList.get(i));
-			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) && 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
+			Integer num = Anything.convertStringToInteger(numList.get(i));
+//			System.out.println(numList.get(i));
+//			System.out.println(num);
+//			System.out.println(num < 0);
+//			System.out.println(num >= 10);
+//			System.out.println(!numList.get(i).matches("[+-]?\\d*(\\.\\d+)?"));
+
+			if (num < 0 || num >= 10 || !numList.get(i).matches("[+-]?\\d*(\\.\\d+)?")) {
+				throw this.exceptionComponent.createNumer0nUncontinuableException(S_FUNC, CLASS_NAME, METHOD_NAME, null,
+						"ERR_OPTION_04", null, null, null, numList.get(i));
+			}
+
+			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) &&
+					0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
 				hl = Const.LOW;
 			} else if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FIVE.getNum()))
 					&& 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.NINE.getNum()))) {
 				hl = Const.HIGH;
-			} else {
-				throw this.exceptionComponent.createNumer0nUncontinuableException(S_FUNC, CLASS_NAME, METHOD_NAME, null,
-						"ERR_OPTION_04", null, null, null, numList.get(i));
 			}
 			hlList.add(hl);
 		}
 		this.highLowList = hlList;
-
-		//		// メッセージ（HIGH内訳前）
-		//		lp.setLogParam(Const.HIGH_LOW, 2,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, gameMaster.getAite())));
-		//
-		//		// メッセージ（HIGH内訳）
-		//		lp.setLogParam(Const.HIGH_LOW, 3,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER,
-		//							Anything.concatListToComma(this.getHighLowList()))));
 	}
 
 	/**

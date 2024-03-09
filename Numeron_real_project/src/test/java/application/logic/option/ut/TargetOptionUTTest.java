@@ -141,8 +141,6 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_playerNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -179,8 +177,6 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_playerNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -217,8 +213,6 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_playerNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -256,8 +250,6 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_playerNormal05Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -296,8 +288,6 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_playerNormal06Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -336,12 +326,11 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -379,12 +368,11 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(4);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -423,12 +411,11 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(5);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -466,12 +453,11 @@ public class TargetOptionUTTest {
 	 */
 	@Test
 	final void targetOption_cpuNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(5);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();

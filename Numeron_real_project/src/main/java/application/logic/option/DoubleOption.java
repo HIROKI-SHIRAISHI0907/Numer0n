@@ -93,18 +93,6 @@ public class DoubleOption {
 	 */
 	private String doubleNum;
 
-	//	/**
-	//	 * Doubleクラス
-	//	 * @param playerCPU プレーヤーorCPU名
-	//	 * @param difficulty 難易度
-	//	 */
-	//	public DoubleOption(String playerCPU ,GameMaster gameMaster,Player player, Computer computer, Info info) {
-	//		this.gameMaster = gameMaster;
-	//		this.player = player;
-	//		this.computer = computer;
-	//		this.info = info;
-	//	}
-
 	/**
 	 * Doubleコールクラス
 	 */
@@ -119,14 +107,6 @@ public class DoubleOption {
 				this.mapUtil.addDigitPriorityMap(Const.THREE_D, Const.YUUSEN_MINUS);
 			}
 		}
-
-		// メッセージ（注意メッセージ）
-		//		lp.setLogParam(Const.DOUBLE, 1,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getChkMember(), gameMaster.getAite())));
-		//
-		//		// メッセージ（知りたい桁メッセージ）
-		//		lp.setLogParam(Const.DOUBLE, 2,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, gameMaster.getAite())));
 
 		// 連続コールが外れた時のインデックス
 		int doubleDigit = 0;
@@ -157,10 +137,6 @@ public class DoubleOption {
 		// 2連続で数字を宣言する
 		int loop = 1;
 		do {
-			// メッセージ（n回目のコール）
-			//			lp.setLogParam(Const.DOUBLE, 3,
-			//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER,
-			//					this.getChkMember(), String.valueOf(loop), String.valueOf(gameMaster.getDigit()))));
 			ArrayList<String> callNumberList;
 			ArrayList<String> correctNumberList;
 			// CPUの場合、任意の数字をコール

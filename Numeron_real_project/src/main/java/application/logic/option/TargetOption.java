@@ -70,30 +70,6 @@ public class TargetOption {
 	 */
 	private int existsInd;
 
-	//	/**
-	//	 * Targetクラス。指定した数字が存在するかどうか判定するクラス
-	//	 * @param playerCPU プレーヤーorCPU名
-	//	 * @param gameMaster GameMasterオブジェクト
-	//	 */
-	//	public TargetOption(String playerCPU, GameMaster gameMaster) {
-	//		this.mem = playerCPU;
-	//		this.gameMaster = gameMaster;
-
-	//		switch (this.gameMaster.getDifficulty()) {
-	//			case Const.EASY:
-	//			case Const.NORMAL:
-	//			case Const.HARD:
-	//				// メッセージ（EASY,NORMAL,HARD注意）
-	//				lp.setLogParam(Const.TARGET, 5,
-	//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-	//				break;
-	//			default:
-	//				// メッセージ（残りの難易度の注意）
-	//				lp.setLogParam(Const.TARGET, 6,
-	//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-	//		}
-	//	}
-
 	/**
 	 * Targetクラス。指定した数字が存在するかどうか判定するクラス
 	 * @param playerCPU プレーヤーorCPU名
@@ -102,10 +78,6 @@ public class TargetOption {
 	public String targetLogic() {
 		// 名前設定
 		this.chkMember = this.gameMaster.getName();
-
-		// メッセージ（Target選択文）
-		//		lp.setLogParam(Const.TARGET, 2,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem())));
 
 		// 存在した場合のindex
 		int existsInd = -1;
@@ -116,7 +88,6 @@ public class TargetOption {
 			tarNumberList = this.gameMaster.getCorrectPlayerNumberList();
 			// 存在するかどうか判断するのに使用する数字
 			// 最優先フラグがあれば
-
 			if (!this.mapUtil.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG)) {
 				exNum = Anything.convertIntegerToString(
 						new Random().nextInt(
@@ -138,27 +109,15 @@ public class TargetOption {
 		if (existsInd > -1) {
 			result = EXIST_LIST_OF_NUMBER;
 
-			// EXHAUSTED,INSANEは-1に戻す
+			// EXHAUSTED,INSANEは-1(初期化)に戻す
 			switch (this.gameMaster.getDifficulty()) {
 			case Const.EXHAUSTED:
 			case Const.INSANE:
 				existsInd = -1;
-				//					// メッセージ（指定した値が存在するが明かさない）
-				//					lp.setLogParam(Const.TARGET, 7,
-				//							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
 				break;
-			//				default:
-			////					// メッセージ（指定した値が存在）
-			////					lp.setLogParam(Const.TARGET, 3,
-			////							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER,
-			////									digitsList[gameMaster.getDigit()-ind])));
-			//					break;
 			}
 			// 存在しない場合
 		} else {
-			//			// メッセージ（指定した値が存在しない）
-			//			lp.setLogParam(Const.TARGET, 4,
-			//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
 		}
 
 		this.existsInd = existsInd;

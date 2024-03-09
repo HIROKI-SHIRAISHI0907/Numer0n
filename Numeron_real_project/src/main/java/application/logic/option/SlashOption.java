@@ -55,16 +55,6 @@ public class SlashOption {
 	 */
 	private String slashNum;
 
-	//	/**
-	//	 * リスト内の最大値から最小値の数値を引く
-	//	 * @param playerCPU プレーヤー名（プレーヤーorCPU）
-	//	 * @param gameMaster GameMasterオブジェクト
-	//	 */
-	//	public SlashOption(String playerCPU, GameMaster gameMaster) {
-	//		this.mem = playerCPU;
-	//		this.gameMaster = gameMaster;
-	//	}
-
 	/**
 	 * リスト内の最大値から最小値の数値を引く
 	 */
@@ -90,14 +80,6 @@ public class SlashOption {
 					"ERR_OPTION_05", null, null, e);
 		}
 
-		//		// メッセージ（slashNo.前）
-		//		lp.setLogParam(Const.SLASH, 2,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, gameMaster.getAite())));
-		//
-		//		// メッセージ（slashNo.）
-		//		lp.setLogParam(Const.SLASH, 3,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER,
-		//						Anything.concatStringToComma(this.getSlashNum()))));
 	}
 
 	/**

@@ -54,12 +54,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -98,12 +97,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(4);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -143,12 +141,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(5);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -190,12 +187,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -235,12 +231,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal05Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(4);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -281,12 +276,11 @@ public class TargetOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void targetOption_realInfoMap_cpuNormal06Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(5);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();

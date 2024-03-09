@@ -4,10 +4,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
-import application.logic.human.Computer;
 import application.logic.human.GameMaster;
-import application.logic.human.Player;
-import application.logic.info.AiSpecifyOptionAndNextAction;
 import application.logic.info.Numer0nInfo;
 import lombok.RequiredArgsConstructor;
 
@@ -26,24 +23,9 @@ public class CommonOptionImpl implements CommonOption {
 	private final GameMaster gameMaster;
 
 	/**
-	 * Player
-	 */
-	private final Player player;
-
-	/**
-	 * Compueter
-	 */
-	private final Computer computer;
-
-	/**
 	 * Numer0nInfo
 	 */
 	private final Numer0nInfo info;
-
-	/**
-	 * AiSpecifyOptionAndNextAction
-	 */
-	private final AiSpecifyOptionAndNextAction aiOaN;
 
 	/**
 	 * ChangeOption
@@ -157,18 +139,9 @@ public class CommonOptionImpl implements CommonOption {
 			}
 		}
 
-
 		// 当てられた場合試合終了（DOUBLEの場合に限る）
 		if (gameOver) {
 			return Const.Numer0n_GAMEOVER;
-		} else {
-			// EXHAUSTED,INSANEはCPUの次行動を確定させるクラスにアクセス
-			switch (this.gameMaster.getDifficulty()) {
-				case Const.EXHAUSTED:
-				case Const.INSANE:
-					this.aiOaN.setOptionYuusenFlagLogic(gameMaster, computer, targetOption, shuffleOption, changeOption);
-					break;
-			}
 		}
 		return Const.Numer0n_CONTINUE;
 	}

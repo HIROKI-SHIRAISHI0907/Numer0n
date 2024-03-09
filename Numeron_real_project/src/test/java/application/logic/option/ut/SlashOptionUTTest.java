@@ -20,6 +20,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import application.component.consts.Const;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.component.error.Numer0nUncontinuableException;
 import application.component.message.MessageAccessor;
@@ -86,14 +87,16 @@ public class SlashOptionUTTest {
 	 */
 	@Test
 	final void slashOption_normal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("0");
 		list.add("1");
 		list.add("2");
-		when(this.gameMaster.getCorrectCpuNumberList()).thenReturn(list);
+		// 難易度
+		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setDigit(3);
+		gameMaster.setCorrectCpuNumberList(list);
+		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		this.testSuite.slashLogic();
 		assertEquals("2", this.testSuite.getSlashNum());
@@ -112,14 +115,16 @@ public class SlashOptionUTTest {
 	 */
 	@Test
 	final void slashOption_normal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("6");
 		list.add("4");
 		list.add("9");
-		when(this.gameMaster.getCorrectCpuNumberList()).thenReturn(list);
+		// 難易度
+		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setDigit(3);
+		gameMaster.setCorrectCpuNumberList(list);
+		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		this.testSuite.slashLogic();
 		assertEquals("5", this.testSuite.getSlashNum());
@@ -145,16 +150,20 @@ public class SlashOptionUTTest {
 		ArgumentCaptor<String> messageCd = ArgumentCaptor.forClass(String.class);
 		ArgumentCaptor<String[]> fillChar = ArgumentCaptor.forClass(String[].class);
 		message.when(() -> MessageAccessor.getMessage(messageCd.capture(), fillChar.capture())).thenReturn("message");
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("6");
 		list.add("*");
 		list.add("9");
-		when(this.gameMaster.getCorrectPlayerNumberList()).thenReturn(list);
+		// 難易度
+		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
+		gameMaster.setCorrectCpuNumberList(list);
+		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
-		Numer0nUncontinuableException e = assertThrows(Numer0nUncontinuableException.class, () -> this.testSuite.slashLogic());
+		Numer0nUncontinuableException e = assertThrows(Numer0nUncontinuableException.class,
+				() -> this.testSuite.slashLogic());
 		assertEquals(S_FUNC, e.getNumer0nErrDTO().getSFuncId());
 		assertEquals(CLASS_NAME, e.getNumer0nErrDTO().getClassName());
 		assertEquals("slashLogic", e.getNumer0nErrDTO().getMethodName());
@@ -167,7 +176,5 @@ public class SlashOptionUTTest {
 		// 引数確認
 		assertEquals("ERR_OPTION_05", messageCd.getValue());
 	}
-
-
 
 }

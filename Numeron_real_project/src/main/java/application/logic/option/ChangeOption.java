@@ -81,19 +81,6 @@ public class ChangeOption {
 	 */
 	private String exNum;
 
-	//	/**
-	//	 * 数値のリストを手持ちの数字に置き換える。
-	//	 * @param playerCPU プレーヤーorCPUどちらのリストを変更するか
-	//	 * @param difficulty 難易度
-	//	 * @param gameMaster GameMasterオブジェクト
-	//	 */
-	//	public ChangeOption(String playerCPU ,GameMaster gameMaster) {
-	//		// 名前を一時保管
-	//		this.mem = playerCPU;
-	//		this.loggerComponent = null;
-	//		this.gameMaster = gameMaster;
-	//	}
-
 	/**
 	 * 交換フラグが立っている場合、任意の数字に交換する。（同一桁限定）<br>
 	 * 難易度によって数値を変えられる桁も検討<br>
@@ -105,35 +92,6 @@ public class ChangeOption {
 	public void changeLogic() {
 		// 名前設定
 		this.chkMember = this.gameMaster.getName();
-
-		// メッセージ
-		//		switch (gameMaster.getDifficulty()) {
-		//			case Const.EASY:
-		//			case Const.NORMAL:
-		//				// メッセージ（CHANGEによる数字の選択（交換したか不明））
-		//				lp.setLogParam(Const.CHANGE, 5,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-		//				break;
-		//			case Const.HARD:
-		//				// メッセージ（CHANGEによる数字の選択（交換したか不明））
-		//				lp.setLogParam(Const.CHANGE, 7,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-		//				break;
-		//			case Const.EXHAUSTED:
-		//				// メッセージ（CHANGEによる数字の選択（交換したか不明））
-		//				lp.setLogParam(Const.CHANGE, 9,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-		//				break;
-		//			case Const.INSANE:
-		//				// メッセージ（CHANGEによる数字の選択（交換したか不明））
-		//				lp.setLogParam(Const.CHANGE, 11,
-		//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-		//				break;
-		//		}
-
-		// メッセージ（CHANGEによる数字の選択）
-		//		lp.setLogParam(Const.CHANGE, 2,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem())));
 
 		// 交換する桁
 		int digitInd = -1;
@@ -151,17 +109,9 @@ public class ChangeOption {
 					if (getDoChangeFlag()) {
 						changeFlag = true;
 					}
-
-					//				// メッセージ（CHANGEによる数字の選択（交換したか不明））
-					//				lp.setLogParam(Const.CHANGE, 4,
-					//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem())));
 					// 他の難易度は交換する
 				} else {
 					changeFlag = true;
-
-					//				// メッセージ（CHANGEによる数字の選択）
-					//				lp.setLogParam(Const.CHANGE, 3,
-					//						new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem())));
 				}
 
 				changedNumberList = this.gameMaster.getCorrectCpuNumberList();
@@ -251,25 +201,6 @@ public class ChangeOption {
 				// PLAYERの場合
 			} else {
 				changedNumberList = this.gameMaster.getCorrectPlayerNumberList();
-				// 交換するかどうかのメッセージとif文
-				//			switch (gameMaster.getDigit()) {
-				//				case 3:
-				//					// メッセージ（選択肢3桁）
-				//					lp.setLogParam(Const.CHANGE, 13,
-				//							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-				//					break;
-				//				case 4:
-				//					// メッセージ（選択肢3桁）
-				//					lp.setLogParam(Const.CHANGE, 14,
-				//							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-				//					break;
-				//				case 5:
-				//					// メッセージ（選択肢3桁）
-				//					lp.setLogParam(Const.CHANGE, 15,
-				//							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
-				//					break;
-				//			}
-
 				this.gameMaster.setCorrectPlayerNumberList(changedNumberList);
 			}
 
@@ -301,35 +232,6 @@ public class ChangeOption {
 			throw this.exceptionComponent.createOnlyFuncIdAndFillCharOtherDTONumer0nUncontinuableException(
 					S_FUNC, e.getNumer0nErrDTO(), fillChar1, fillChar2, fillChar3, fillChar4);
 		}
-
-		// メッセージ
-		//		switch (gameMaster.getDifficulty()) {
-		//			case Const.EASY:
-		//			case Const.NORMAL:
-		//				// メッセージ（桁の位置、HIGHLOW）
-		//				lp.setLogParam(Const.CHANGE, 6,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem(),
-		//							gameMaster.getAite(), digitsList[gameMaster.getDigit()-this.getDigitInd()],
-		//							this.getLh())));
-		//				break;
-		//			case Const.HARD:
-		//				// メッセージ（HIGHLOW）
-		//				lp.setLogParam(Const.CHANGE, 8,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem(),
-		//							gameMaster.getAite(), this.getLh())));
-		//				break;
-		//			case Const.EXHAUSTED:
-		//				// メッセージ（桁の位置）
-		//				lp.setLogParam(Const.CHANGE, 10,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem(),
-		//							gameMaster.getAite(), digitsList[gameMaster.getDigit()-this.getDigitInd()])));
-		//				break;
-		//			case Const.INSANE:
-		//				// メッセージ（情報なし）
-		//				lp.setLogParam(Const.CHANGE, 12,
-		//					new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getMem())));
-		//				break;
-		//		}
 
 	}
 

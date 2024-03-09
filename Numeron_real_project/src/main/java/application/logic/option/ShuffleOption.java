@@ -95,9 +95,6 @@ public class ShuffleOption {
 					if (getDoShuffleFlag()) {
 						shuffleNumberList = doShuffle(shuffleNumberList);
 					}
-					// メッセージ（shuffleしたか不明）
-					//					lp.setLogParam(Const.SHUFFLE, 3,
-					//							new ArrayList<String>(Arrays.asList(Const.GAMEMASTER)));
 					break;
 				}
 				this.gameMaster.setCorrectCpuNumberList(shuffleNumberList);
@@ -115,9 +112,6 @@ public class ShuffleOption {
 					S_FUNC, e.getNumer0nErrDTO(), "シャッフル後の値:" + shuffleNumberList);
 		}
 
-		// メッセージ（shuffleした使用）
-		//		lp.setLogParam(Const.SHUFFLE, 2,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, this.getChkMember())));
 	}
 
 	/**
@@ -156,12 +150,10 @@ public class ShuffleOption {
 			// ランダムな文字を選ぶ
 			Integer number = new Random().nextInt(10);
 			String numberStr = Anything.convertIntegerToString(number);
-			// INSANEを除き、数字が被らないように登録(ただしshuffleNumberListに入っている数字であること)
+			// 数字が被らないように登録(ただしshuffleNumberListに入っている数字であること)
 			boolean nextFlg = false;
 			if (!returnList.contains(numberStr)
 					&& shuffleNumberList.contains(numberStr)) {
-				nextFlg = true;
-			} else if (shuffleNumberList.contains(numberStr)) {
 				nextFlg = true;
 			}
 

@@ -140,8 +140,6 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_playerNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -183,8 +181,6 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_playerNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -225,8 +221,6 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_playerNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -312,12 +306,11 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(4);
+		gameMaster.setName(Const.CPU);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -355,12 +348,11 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -397,12 +389,11 @@ public class DoubleOptionUTTest {
 	 */
 	@Test
 	final void doubleOption_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(5);
+		gameMaster.setName(Const.CPU);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");

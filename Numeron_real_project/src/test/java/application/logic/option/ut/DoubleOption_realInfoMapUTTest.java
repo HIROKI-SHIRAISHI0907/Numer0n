@@ -69,8 +69,6 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_playerNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -141,8 +139,6 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_playerNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -217,8 +213,6 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_playerNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -294,8 +288,6 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_playerNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "PLAYER");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
@@ -370,12 +362,11 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(4);
+		gameMaster.setName(Const.CPU);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("4");
@@ -444,12 +435,11 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("7");
@@ -521,12 +511,11 @@ public class DoubleOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void doubleOption_realInfoMap_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("7");

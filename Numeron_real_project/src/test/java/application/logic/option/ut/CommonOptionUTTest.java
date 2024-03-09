@@ -19,12 +19,11 @@ import application.component.consts.Const;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
-import application.logic.info.AiSpecifyOptionAndNextAction;
 import application.logic.info.Numer0nInfo;
 import application.logic.info.Numer0nSpecifyNumber;
 import application.logic.judge.Eatbite;
 import application.logic.option.ChangeOption;
-import application.logic.option.CommonOption;
+import application.logic.option.CommonOptionImpl;
 import application.logic.option.DoubleOption;
 import application.logic.option.HighlowOption;
 import application.logic.option.ShuffleOption;
@@ -116,12 +115,6 @@ public class CommonOptionUTTest {
 	private Numer0nSpecifyNumber aiSpecifyNumber;
 
 	/**
-	 * AiSpecifyOptionAndNextAction mock
-	 */
-	@Mock
-	private AiSpecifyOptionAndNextAction aiOaN;
-
-	/**
 	 * Numer0nInfo mock
 	 */
 	@Mock
@@ -137,7 +130,7 @@ public class CommonOptionUTTest {
 	 * CommonOptionImpl
 	 */
 	@InjectMocks
-	private CommonOption testSuite;
+	private CommonOptionImpl testSuite;
 
 	@BeforeEach
 	public void setUp() {
@@ -601,6 +594,8 @@ public class CommonOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
+		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
+		
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		assertEquals(Const.Numer0n_CONTINUE, this.testSuite.summarizeOption(Const.SHUFFLE));

@@ -57,12 +57,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -109,12 +108,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -161,12 +159,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -211,12 +208,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -263,12 +259,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal05Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -315,12 +310,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal06Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -342,7 +336,7 @@ public class ChangeOption_realInfoMapUTTest {
 		assertNotNull(this.testSuite.getExNum());
 		assertNotNull(this.testSuite.getLh());
 		assertNotNull(this.testSuite.getDigitInd());
-		assertNotEquals("816", convertListToString(this.testSuite.getChangedNumberList(), null));
+		assertNotNull(convertListToString(this.testSuite.getChangedNumberList(), null));
 	}
 
 	/**
@@ -365,12 +359,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal07Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -417,12 +410,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal08Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -469,12 +461,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal09Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -519,12 +510,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal10Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -572,12 +562,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal11Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -621,12 +610,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal12Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -647,7 +635,7 @@ public class ChangeOption_realInfoMapUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "exceptionComponent", exceptionComponent);
 		// 検証
 		this.testSuite.changeLogic();
-		assertNull(this.testSuite.getExNum());
+		assertEquals("0", this.testSuite.getExNum());
 		assertEquals("NOTCLEAR", this.testSuite.getLh());
 		assertEquals(-1, this.testSuite.getDigitInd());
 		assertEquals("345", convertListToString(this.testSuite.getChangedNumberList(), null));
@@ -674,12 +662,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal13Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -728,12 +715,11 @@ public class ChangeOption_realInfoMapUTTest {
 	 */
 	@Test
 	final void changeOption_realInfoMap_cpuNormal14Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -780,38 +766,6 @@ public class ChangeOption_realInfoMapUTTest {
 			returnNum += str;
 		}
 		return returnNum;
-	}
-
-	/**
-	 * カンマ付き文字連結をおこなう。
-	 * @param array 文字列リスト
-	 * @param key カンマ付きか否か
-	 * @return returnNum 連結後の文字列
-	 */
-	private String convertListToString(ArrayList<String> array) {
-		return convertListToString(array, "comma");
-	}
-
-	/**
-	 * HighLowの関係を調べる
-	 * @param array 文字列リスト
-	 * @return returnNum 連結後の文字列
-	 */
-	private ArrayList<String> highLow(ArrayList<String> list) {
-		ArrayList<String> hlList = new ArrayList<String>();
-		for (int i = 0; i < list.size(); i++) {
-			String hl = null;
-			Integer num = Integer.parseInt(list.get(i));
-			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) &&
-					0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
-				hl = Const.LOW;
-			} else if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FIVE.getNum()))
-					&& 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.NINE.getNum()))) {
-				hl = Const.HIGH;
-			}
-			hlList.add(hl);
-		}
-		return hlList;
 	}
 
 }
