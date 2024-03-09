@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nNextActionFlagEnum;
+import application.component.consts.Numer0nOptionEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -91,30 +93,27 @@ public class Numer0nSpecifyNumberMultipleConfirmationImpl implements Numer0nSpec
 				// 得られた情報を一旦リスト化する
 				ArrayList<String> infoList = Anything.splitComma(infoStr);
 				// 先頭に使用したオプションがセットされているためそれによって処理を分ける
-				switch (infoList.get(0)) {
-					// オプション使用なしの場合
-					case Const.NO_OPTION:
+				// オプション使用なしの場合
+				if (Numer0nOptionEnum.NOOPTION.getOprionName().equals(infoList.get(0))) {
 						// setNoneOptionAddMethodに渡し、結果を取得
 						int everNoneOpResult = this.aiSpecifyNumber
 							.setNoneOptionAddCandidateMethod(
 									infoStr,
 									candNum,
-									Const.EVER_INFO_FLAG);
+									Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd());
 						if (everNoneOpResult == Const.NOT_MATCH) {
 							exceptionFlag = true;
 						}
-						break;
 						// その他のオプションの場合
-					default:
+				} else {
 						int everOpResult = this.aiSpecifyNumber
 							.setOptionAddCandidateMethod(
 									infoStr,
 									candNum,
-									Const.EVER_INFO_FLAG);
+									Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd());
 						if (everOpResult == Const.NOT_MATCH) {
 							exceptionFlag = true;
 						}
-						break;
 				}
 
 				// NOT_MATCHがでてしまった時点で候補ではないのでbreak
