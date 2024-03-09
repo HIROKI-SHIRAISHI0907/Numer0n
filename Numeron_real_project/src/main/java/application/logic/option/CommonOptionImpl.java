@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
+import application.component.consts.Numer0nTargetEnum;
 import application.logic.human.GameMaster;
 import application.logic.info.Numer0nInfo;
 import lombok.RequiredArgsConstructor;
@@ -113,7 +115,8 @@ public class CommonOptionImpl implements CommonOption {
 				String targetResult = this.targetOption.targetLogic();
 				// -1が返却された場合、D'ont teach indexを連結
 				teachStr = (-1 == this.targetOption.getExistsInd())
-						? Const.DONT_TEACH_INDEX : Anything.convertIntegerToString(this.targetOption.getExistsInd());
+						? Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb() :
+							Anything.convertIntegerToString(this.targetOption.getExistsInd());
 				if (Const.CPU.equals(this.gameMaster.getName())) {
 					this.info.addCpuInfoList(Anything.concatStringToComma(
 							item, teachStr, targetResult, this.targetOption.getExNum()));
@@ -126,7 +129,8 @@ public class CommonOptionImpl implements CommonOption {
 				changeOption.changeLogic();
 				// -1が返却された場合、D'ont teach indexを連結
 				teachStr = (-1 == this.changeOption.getDigitInd())
-						? Const.DONT_TEACH_INDEX : Anything.convertIntegerToString(this.changeOption.getDigitInd());
+						? Numer0nChangeEnum.DONT_TEACH_INDEX.getAbb() :
+							Anything.convertIntegerToString(this.changeOption.getDigitInd());
 				if (Const.CPU.equals(this.gameMaster.getName())) {
 					this.info.addPlayerInfoList(Anything.concatStringToComma(
 							item, teachStr, this.changeOption.getLh()));

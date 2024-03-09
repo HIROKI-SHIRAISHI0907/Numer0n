@@ -13,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nShuffleEnum;
 import application.logic.option.map.ShuffleOptionMapUtil;
 
 /**
@@ -52,9 +53,9 @@ public class ShuffleOptionMapUtilUTTest {
 	@Test
 	final void ShuffleOptionMapUtil01Test() throws Exception {
 		// テスト
-		this.testSuite.addDoPriorityMap(Const.SHUFFLE_GO, Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
 		String value = this.testSuite.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
-		assertEquals(Const.SHUFFLE_GO, value);
+		assertEquals(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), value);
 
 		assertTrue(this.testSuite.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG));
 	}

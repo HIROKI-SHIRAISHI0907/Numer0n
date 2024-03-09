@@ -13,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.logic.option.map.ChangeOptionMapUtil;
@@ -100,9 +101,9 @@ public class ChangeOptionMapUtilUTTest {
 	@Test
 	final void ChangeOptionMapUtil03Test() throws Exception {
 		// テスト
-		this.testSuite.addDoPriorityMap(Const.CHANGE_GO, Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
 		String value = this.testSuite.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
-		assertEquals(Const.SHUFFLE_GO, value);
+		assertEquals(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), value);
 
 		assertTrue(this.testSuite.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG));
 	}

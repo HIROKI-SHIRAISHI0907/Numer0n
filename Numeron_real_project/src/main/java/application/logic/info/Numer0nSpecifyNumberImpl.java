@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
+import application.component.consts.Numer0nTargetEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -36,9 +38,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 	private static final int RANDOM_NUMBER_TEN = 10;
 
 	/**
-	 * Target情報用定数
+	 * Numer0n続行
 	 */
-	private static final String NONE_EXIST_LIST_OF_NUMBER = "NONEEXISTLISTOFNUMBER";
+	private static final Integer Numer0n_CONTINUE = 0;
 
 	/**
 	 * Playerクラス
@@ -305,7 +307,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		}
 
 		// 処理を続ける
-		return Const.CONTINUE;
+		return Numer0n_CONTINUE;
 
 	}
 
@@ -408,7 +410,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					}
 				}
 				// 不明だった場合、
-			} else if (Const.NOT_CLEAR.equals(judgeChangeTfResult)) {
+			} else if (Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(judgeChangeTfResult)) {
 				// 桁がわかっている場合も含め
 				// 候補にもなり、そうでないものにもなり得るため、両方入れておく
 				if (Const.CPU.equals(this.gameMaster.getName())) {
@@ -504,12 +506,12 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 			break;
 		// [TARGET,2,EXISTLISTOFNUMBER,4]（オプション、桁、存在するか？、宣言した数字）の形式か
 		case Const.TARGET:
-			if (NONE_EXIST_LIST_OF_NUMBER.equals(infoList.get(2))) {
+			if (Numer0nTargetEnum.NONE_EXIST_LIST_OF_NUMBER.getAbb().equals(infoList.get(2))) {
 				if (Const.EVER_INFO_FLAG.equals(flag)) {
 					// 宣言した数字が数値リストに存在した場合、対象外（存在しないことがわかっているため）
 					// everFlag = false→NOT_MATCH（満たしていないため削除対象）
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
-					if (Const.DONT_TEACH_INDEX.equals(infoList.get(1))) {
+					if (Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(infoList.get(1))) {
 						if (numList.contains(infoList.get(3))) {
 							everFlag = false;
 						}
@@ -522,7 +524,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 				} else {
 					// 宣言した数字が数値リストに存在しないか
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
-					if (Const.DONT_TEACH_INDEX.equals(infoList.get(1))) {
+					if (Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(infoList.get(1))) {
 						if (numList.contains(infoList.get(3))) {
 							if (Const.CPU.equals(this.gameMaster.getName())) {
 								this.computer.addNotCandidateNumberList(chkNumber);
@@ -586,7 +588,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					// everFlag = false→NOT_MATCH（満たしていないため削除対象）
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
 					// 存在する桁がわかっているか（[TARGET, 0orDONTTEACHINDEX, EXISTLISTOFNUMBER, 4]）
-					if (Const.DONT_TEACH_INDEX.equals(infoList.get(1))) {
+					if (Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(infoList.get(1))) {
 						if (!numList.contains(infoList.get(3))) {
 							everFlag = false;
 						}
@@ -600,7 +602,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					// 宣言した数字が数値リストに存在するか
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
 					// 存在する桁がわかっているか（[TARGET, 0orDONTTEACHINDEX, EXISTLISTOFNUMBER, 4]）
-					if (Const.DONT_TEACH_INDEX.equals(infoList.get(1))) {
+					if (Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(infoList.get(1))) {
 						if (numList.contains(infoList.get(3))) {
 							if (Const.CPU.equals(this.gameMaster.getName())) {
 								this.computer.addCandidateNumberList(chkNumber);
@@ -746,8 +748,8 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 	 */
 	private String judgeChangeTF(ArrayList<String> numList, String digit, String changeHighLowInfo) {
 		//EXHAUSTED,INSANE用（交換された数字がHIGHかLOWかわからない場合）
-		if (Const.NOT_CLEAR.equals(changeHighLowInfo)) {
-			return Const.NOT_CLEAR;
+		if (Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(changeHighLowInfo)) {
+			return Numer0nChangeEnum.NOT_CLEAR.getAbb();
 		}
 
 		Integer zero = Anything.convertStringToInteger(Numer0nSelectNumberEnum.ZERO.getNum());
@@ -757,7 +759,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 
 		// 数字を調べどこかの桁にHIGHorLOWが混じっていたらOK
 		boolean tf = false;
-		if (Const.DONT_TEACH_INDEX.equals(digit)) {
+		if (Numer0nChangeEnum.DONT_TEACH_INDEX.getAbb().equals(digit)) {
 			Iterator<String> ite = numList.iterator();
 			while (ite.hasNext()) {
 				Integer iteInt = Anything.convertStringToInteger(ite.next());

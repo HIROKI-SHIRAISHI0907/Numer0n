@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponent;
@@ -212,13 +213,13 @@ public class ChangeOption {
 
 			// EXHAUSTEDは交換した数値の情報を教えないため、初期化
 			if (Const.EXHAUSTED.equals(this.gameMaster.getDifficulty())) {
-				lh = Const.NOT_CLEAR;
+				lh = Numer0nChangeEnum.NOT_CLEAR.getAbb();
 			}
 
 			// INSANEは何も教えないため、全て初期化
 			if (Const.INSANE.equals(this.gameMaster.getDifficulty())) {
 				digitInd = -1;
-				lh = Const.NOT_CLEAR;
+				lh = Numer0nChangeEnum.NOT_CLEAR.getAbb();
 			}
 
 			this.digitInd = digitInd;
@@ -252,7 +253,7 @@ public class ChangeOption {
 			ind = this.mapUtil.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
 		}
 
-		return (Const.CHANGE_GO.equals(ind))
+		return (Numer0nChangeEnum.CHANGE_GO.getOprionCd().equals(ind))
 				? true
 				: false;
 	}

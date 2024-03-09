@@ -7,9 +7,9 @@ package application.component.consts;
  */
 public enum Numer0nDoubleEnum {
 
-	/** 0:Numer0nを終了 */
-	ALLEAT(0, "終了"),
-	/** 1:Numer0nを続行 */
+	/** 0:EATが桁数と一致(全数字がわかった) */
+	ALLEAT(0, "EAT終了"),
+	/** 1:nEAT0BITEでない */
 	TEACH_NUMBER(1, "続行");
 
 	/** オプションコード */

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import application.component.consts.Const;
+import application.component.consts.Numer0nShuffleEnum;
 
 /**
  * ShuffleOptionにて使用する最優先フラグを管理するクラス
@@ -23,8 +23,8 @@ public class ShuffleOptionMapUtil {
 	public static final Map<String, Integer> SHUFFLE_DO_PRIORITY_MAP;
 	static {
 		Map<String, Integer> shuffleFlagYuusenMap = new HashMap<String, Integer>();
-		shuffleFlagYuusenMap.put(Const.SHUFFLE_GO, null);
-		shuffleFlagYuusenMap.put(Const.SHUFFLE_REJECT, null);
+		shuffleFlagYuusenMap.put(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), null);
+		shuffleFlagYuusenMap.put(Numer0nShuffleEnum.SHUFFLE_REJECT.getOprionCd(), null);
 
 		SHUFFLE_DO_PRIORITY_MAP = shuffleFlagYuusenMap;
 	};

@@ -8,7 +8,9 @@ import java.util.Collections;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
+import application.component.consts.Numer0nTargetEnum;
 import application.logic.human.GameMaster;
 import application.logic.judge.Eatbite;
 
@@ -389,10 +391,10 @@ public class Numer0nSpecifyNumberUtil {
 				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
 				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 				String hl = chklist.get(1);
-				if (!Const.DONT_TEACH_INDEX.equals(chklist.get(0))) {
+				if (!Numer0nChangeEnum.DONT_TEACH_INDEX.getAbb().equals(chklist.get(0))) {
 					String chk = list.get(Anything.convertStringToInteger(chklist.get(0)));
 					Integer chkInt = Anything.convertStringToInteger(chk);
-					if (Const.NOT_CLEAR.equals(chklist.get(1))) {
+					if (Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(chklist.get(1))) {
 						hCount++;
 						lCount++;
 					} else if (Const.HIGH.equals(hl)) {
@@ -407,7 +409,7 @@ public class Numer0nSpecifyNumberUtil {
 						}
 					}
 				} else {
-					if (!Const.NOT_CLEAR.equals(chklist.get(1))) {
+					if (!Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(chklist.get(1))) {
 						if ((list.contains("5") ||
 								list.contains("6") ||
 								list.contains("7") ||
@@ -455,10 +457,10 @@ public class Numer0nSpecifyNumberUtil {
 				Integer five = Anything.convertStringToInteger(Numer0nSelectNumberEnum.FIVE.getNum());
 				Integer nine = Anything.convertStringToInteger(Numer0nSelectNumberEnum.NINE.getNum());
 				String hl = chklist.get(1);
-				if (!Const.DONT_TEACH_INDEX.equals(chklist.get(0))) {
+				if (!Numer0nChangeEnum.DONT_TEACH_INDEX.getAbb().equals(chklist.get(0))) {
 					String chk = list.get(Anything.convertStringToInteger(chklist.get(0)));
 					Integer chkInt = Anything.convertStringToInteger(chk);
-					if (Const.NOT_CLEAR.equals(chklist.get(1))) {
+					if (Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(chklist.get(1))) {
 						hCount++;
 						lCount++;
 					} else if (Const.HIGH.equals(hl)) {
@@ -473,7 +475,7 @@ public class Numer0nSpecifyNumberUtil {
 						}
 					}
 				} else {
-					if (!Const.NOT_CLEAR.equals(chklist.get(1))) {
+					if (!Numer0nChangeEnum.NOT_CLEAR.getAbb().equals(chklist.get(1))) {
 						if ((list.contains("0") ||
 								list.contains("1") ||
 								list.contains("2") ||
@@ -526,10 +528,10 @@ public class Numer0nSpecifyNumberUtil {
 				// 存在するか
 				if (!"NONEEXISTLISTOFNUMBER".equals(existChk)) {
 					// 桁の位置がわかるか
-					if (!Const.DONT_TEACH_INDEX.equals(digitChk)) {
+					if (!Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(digitChk)) {
 						String chk = list.get(Anything.convertStringToInteger(digitChk));
 						// その数字がわかって等しいか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (chk.equals(numberChk)) {
 								one++;
 							}
@@ -537,7 +539,7 @@ public class Numer0nSpecifyNumberUtil {
 					// 桁の位置が不明か
 					} else {
 						// 存在する数字がわかるか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (list.contains(numberChk)) {
 								two++;
 							}
@@ -549,10 +551,10 @@ public class Numer0nSpecifyNumberUtil {
 				// 存在しないか
 				} else {
 					// 桁の位置がわかるか
-					if (!Const.DONT_TEACH_INDEX.equals(digitChk)) {
+					if (!Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(digitChk)) {
 						String chk = list.get(Anything.convertStringToInteger(digitChk));
 						// その数字がわかって等しくないか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (!chk.equals(numberChk)) {
 								four++;
 							}
@@ -560,7 +562,7 @@ public class Numer0nSpecifyNumberUtil {
 					// 桁の位置が不明か
 					} else {
 						// 存在しない数字がわかるか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (!list.contains(numberChk)) {
 								five++;
 							}
@@ -608,10 +610,10 @@ public class Numer0nSpecifyNumberUtil {
 				// 存在するか
 				if (!"NONEEXISTLISTOFNUMBER".equals(existChk)) {
 					// 桁の位置がわかるか
-					if (!Const.DONT_TEACH_INDEX.equals(digitChk)) {
+					if (!Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(digitChk)) {
 						String chk = list.get(Anything.convertStringToInteger(digitChk));
 						// その数字がわかって等しいか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (!chk.equals(numberChk)) {
 								one++;
 							}
@@ -619,7 +621,7 @@ public class Numer0nSpecifyNumberUtil {
 					// 桁の位置が不明か
 					} else {
 						// 存在する数字がわかるか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (!list.contains(numberChk)) {
 								two++;
 							}
@@ -631,10 +633,10 @@ public class Numer0nSpecifyNumberUtil {
 				// 存在しないか
 				} else {
 					// 桁の位置がわかるか
-					if (!Const.DONT_TEACH_INDEX.equals(digitChk)) {
+					if (!Numer0nTargetEnum.DONT_TEACH_INDEX.getAbb().equals(digitChk)) {
 						String chk = list.get(Anything.convertStringToInteger(digitChk));
 						// その数字がわかって等しくないか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (chk.equals(numberChk)) {
 								four++;
 							}
@@ -642,7 +644,7 @@ public class Numer0nSpecifyNumberUtil {
 					// 桁の位置が不明か
 					} else {
 						// 存在しない数字がわかるか
-						if (!Const.NOT_CLEAR.equals(numberChk)) {
+						if (!Numer0nTargetEnum.NOT_CLEAR.getAbb().equals(numberChk)) {
 							if (list.contains(numberChk)) {
 								five++;
 							}

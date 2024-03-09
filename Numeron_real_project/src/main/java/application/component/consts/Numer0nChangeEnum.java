@@ -12,7 +12,9 @@ public enum Numer0nChangeEnum {
 	/** 2:変更しない */
 	CHANGE_REJECT("2", "変更しない"),
 	/** 難易度:EXHAUSTED,INSANEの際に存在、非存在を教えないようにする定数 */
-	DONT_TEACH_INDEX("3", "DONTTEACHINDEX");
+	DONT_TEACH_INDEX("3", "DONTTEACHINDEX"),
+	/** 交換後のHIGH,LOW情報を教えないようにする定数 */
+	NOT_CLEAR("4", "NOTCLEAR");
 
 	/** オプションコード */
 	private final String optionCd;

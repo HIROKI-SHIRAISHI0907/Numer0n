@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 
@@ -68,8 +68,8 @@ public class ChangeOptionMapUtil {
 	public static final Map<String, Integer> CHANGE_DO_PRIORITY_MAP;
 	static {
 		Map<String, Integer> changeDoYuusenMap = new HashMap<String, Integer>();
-		changeDoYuusenMap.put(Const.CHANGE_GO, null);
-		changeDoYuusenMap.put(Const.CHANGE_REJECT, null);
+		changeDoYuusenMap.put(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), null);
+		changeDoYuusenMap.put(Numer0nChangeEnum.CHANGE_REJECT.getOprionCd(), null);
 
 		CHANGE_DO_PRIORITY_MAP = changeDoYuusenMap;
 	};

@@ -15,6 +15,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.error.CreateErrorExceptionComponentImpl;
@@ -629,7 +630,7 @@ public class ChangeOption_realInfoMapUTTest {
 		mapUtil.clearDoPriorityMap();
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDoPriorityMap(Const.CHANGE_REJECT, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_REJECT.getOprionCd(), Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// 例外
 		CreateErrorExceptionComponentImpl exceptionComponent = spy(new CreateErrorExceptionComponentImpl());
@@ -681,7 +682,7 @@ public class ChangeOption_realInfoMapUTTest {
 		mapUtil.clearDoPriorityMap();
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDoPriorityMap(Const.CHANGE_GO, Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.TWO.getNum(), Const.SAI_YUUSEN_FLAG);
 		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);

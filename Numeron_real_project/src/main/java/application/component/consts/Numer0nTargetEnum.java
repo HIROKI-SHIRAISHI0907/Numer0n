@@ -12,7 +12,9 @@ public enum Numer0nTargetEnum {
 	/** 2:変更しない */
 	NONE_EXIST_LIST_OF_NUMBER("2", "NONEEXISTLISTOFNUMBER"),
 	/** 難易度:EXHAUSTED,INSANEの際に存在、非存在を教えないようにする定数 */
-	DONT_TEACH_INDEX("3", "DONTTEACHINDEX");
+	DONT_TEACH_INDEX("3", "DONTTEACHINDEX"),
+	/** 指定後のHIGH,LOW情報を教えないようにする定数 */
+	NOT_CLEAR("4", "NOTCLEAR");
 
 	/** オプションコード */
 	private final String optionCd;

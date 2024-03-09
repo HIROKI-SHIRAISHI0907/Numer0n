@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nShuffleEnum;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
 import application.logic.human.GameMaster;
@@ -129,7 +130,7 @@ public class ShuffleOption {
 			ind = this.mapUtil.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
 		}
 
-		return (Const.SHUFFLE_GO.equals(ind))
+		return (Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd().equals(ind))
 				? true
 				: false;
 	}

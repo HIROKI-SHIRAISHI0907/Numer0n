@@ -35,6 +35,16 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 	private static final String PLAYER = "PLAYER";
 
 	/**
+	 * Numer0n続行
+	 */
+	private static final Integer Numer0n_CONTINUE = 0;
+
+	/**
+	 * Numer0n終了
+	 */
+	private static final Integer Numer0n_GAMEOVER = 1;
+
+	/**
 	 * Numer0nInfo
 	 */
 	@Mock
@@ -79,9 +89,9 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		Player player = spy(new Player(gameMaster, this.info, this.util));
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
-		int result = this.testSuite.setNoneOptionAddCandidateMethod(
+		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
 				info, chkNumber, Const.LAST_INFO_FLAG);
-		assertEquals(Const.CONTINUE, result);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("123", player.getCandidatePlayerNumberList().get(0));
 	}
 
@@ -117,9 +127,9 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		player.addCandidateNumberList(chkNumber);
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
-		int result = this.testSuite.setNoneOptionAddCandidateMethod(
+		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
 				info, chkNumber, Const.LAST_INFO_FLAG);
-		assertEquals(Const.CONTINUE, result);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(player.getCandidatePlayerNumberList().size() == 0);
 		assertEquals("123", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -154,9 +164,9 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		Computer computer = spy(new Computer(gameMaster, this.info, this.util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		int result = this.testSuite.setNoneOptionAddCandidateMethod(
+		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
 				info, chkNumber, Const.LAST_INFO_FLAG);
-		assertEquals(Const.CONTINUE, result);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("675", computer.getCandidateCpuNumberList().get(0));
 	}
 
@@ -190,9 +200,9 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		Computer computer = spy(new Computer(gameMaster, this.info, this.util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		int result = this.testSuite.setNoneOptionAddCandidateMethod(
+		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
 				info, chkNumber, Const.LAST_INFO_FLAG);
-		assertEquals(Const.CONTINUE, result);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("123", computer.getCandidateCpuNumberList().get(0));
 	}
 
@@ -226,9 +236,9 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		Computer computer = spy(new Computer(gameMaster, this.info, this.util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		int result = this.testSuite.setNoneOptionAddCandidateMethod(
+		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
 				info, chkNumber, Const.LAST_INFO_FLAG);
-		assertEquals(Const.CONTINUE, result);
+		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(computer.getCandidateCpuNumberList().size() == 0);
 		assertEquals("834", computer.getNotCandidateCpuNumberList().get(0));
 	}
