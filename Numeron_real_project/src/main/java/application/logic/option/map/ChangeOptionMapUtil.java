@@ -225,49 +225,4 @@ public class ChangeOptionMapUtil {
 		}
 	}
 
-	/**
-	 * Mapの値からkeyを取得するメソッド
-	 * @param <K> key
-	 * @param <V> value
-	 * @param map map
-	 * @param value value
-	 * @return key
-	 */
-	public String getStringMapKey(Map<String, Integer> map, Integer value) {
-        for (Map.Entry<String, Integer> entry: map.entrySet()) {
-            if (value.equals(entry.getValue())) {
-                return entry.getKey();
-            }
-        }
-        return null;
-    }
-
-	/**
-	 * Mapの値からkeyを取得するメソッド
-	 * @param <K> key
-	 * @param <V> value
-	 * @param map map
-	 * @param value value
-	 * @return key
-	 */
-	public Integer getIntegerMapKey(Map<Integer, Integer> map, Integer value) {
-        for (Map.Entry<Integer, Integer> entry: map.entrySet()) {
-            if (value.equals(entry.getValue())) {
-                return entry.getKey();
-            }
-        }
-        return null;
-    }
-
-
-	/**
-	 * Mapの値からkeyに紐づくvalueを取得するメソッド
-	 * @param map map
-	 * @param key 任意の型のキー
-	 * @return 値
-	 */
-	public Integer getMapValue(Map<Object, Integer> map, Object key) {
-		return map.get(key);
-    }
-
 }

@@ -80,21 +80,4 @@ public class ShuffleOptionMapUtil {
 		}
 	}
 
-	/**
-	 * Mapの値からkeyを取得するメソッド
-	 * @param <K> key
-	 * @param <V> value
-	 * @param map map
-	 * @param value value
-	 * @return key
-	 */
-	public String getStringMapKey(Map<String, Integer> map, Integer value) {
-        for (Map.Entry<String, Integer> entry: map.entrySet()) {
-            if (value.equals(entry.getValue())) {
-                return entry.getKey();
-            }
-        }
-        return null;
-    }
-
 }

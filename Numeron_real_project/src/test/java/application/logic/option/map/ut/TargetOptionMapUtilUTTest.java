@@ -13,11 +13,11 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
 import application.component.consts.Const;
-import application.logic.option.map.DoubleOptionMapUtil;
+import application.logic.option.map.TargetOptionMapUtil;
 
 /**
  * <p>
- * DoubleOptionMapUtilテストクラス
+ * TargetOptionMapUtilテストクラス
  * </p>
  * テストを始める前にMap内の値をクリアしておく
  * @author shiraishitoshio
@@ -26,14 +26,14 @@ import application.logic.option.map.DoubleOptionMapUtil;
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
 @Tag("UT")
-public class DoubleOptionMapUtilUTTest {
+public class TargetOptionMapUtilUTTest {
 
 	@InjectMocks
-	private DoubleOptionMapUtil testSuite;
+	private TargetOptionMapUtil testSuite;
 
 	@BeforeEach
 	public void setUp() {
-		this.testSuite.clearDigitPriorityMap();
+		this.testSuite.clearSelectNumberPriorityMap();
 		MockitoAnnotations.openMocks(this);
 	}
 
@@ -42,7 +42,7 @@ public class DoubleOptionMapUtilUTTest {
 	 * 正常系01
 	 * </p>
 	 * [初期設定]<br>
-	 * 桁:0
+	 * 選択:0<br>
 	 * 最優先フラグを設定<br>
 	 * [期待値]<br>
 	 * ・最優先フラグを設定した桁が取得できること<br>
@@ -50,13 +50,13 @@ public class DoubleOptionMapUtilUTTest {
 	 * @throws Exception
 	 */
 	@Test
-	final void DoubleOptionMapUtil01Test() throws Exception {
+	final void TargetOptionMapUtil01Test() throws Exception {
 		// テスト
-		this.testSuite.addDigitPriorityMap(Const.ZERO_D, Const.SAI_YUUSEN_FLAG);
-		int value = this.testSuite.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
-		assertEquals(Const.ZERO_D, value);
+		this.testSuite.addSelectNumberPriorityMap(Const.ZERO, Const.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
+		assertEquals(Const.ZERO, value);
 
-		assertTrue(this.testSuite.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertTrue(this.testSuite.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG));
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class DoubleOptionMapUtilUTTest {
 	 * 正常系02
 	 * </p>
 	 * [初期設定]<br>
-	 * 桁:-1
+	 * 選択:-1<br>
 	 * 最優先フラグを設定<br>
 	 * [期待値]<br>
 	 * ・最優先フラグを設定した桁が取得できないこと<br>
@@ -72,13 +72,13 @@ public class DoubleOptionMapUtilUTTest {
 	 * @throws Exception
 	 */
 	@Test
-	final void DoubleOptionMapUtil02Test() throws Exception {
+	final void targetOptionMapUtil02Test() throws Exception {
 		// テスト
-		this.testSuite.addDigitPriorityMap(-1, Const.SAI_YUUSEN_FLAG);
-		Integer value = this.testSuite.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addSelectNumberPriorityMap("-1", Const.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
 		assertNull(value);
 
-		assertFalse(this.testSuite.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertFalse(this.testSuite.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG));
 	}
 
 }
