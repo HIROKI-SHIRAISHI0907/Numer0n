@@ -1,7 +1,6 @@
 package application.logic.option.ut;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.*;
@@ -25,6 +24,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.message.MessageAccessor;
 import application.logic.human.GameMaster;
 import application.logic.option.ChangeOption;
@@ -141,11 +141,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal01Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -160,9 +159,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -194,11 +193,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal02Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -213,9 +211,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -251,11 +249,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal03Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -270,9 +267,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -308,11 +305,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal04Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -327,9 +323,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -365,11 +361,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal05Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -384,9 +379,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -416,11 +411,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal06Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -464,11 +458,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal07Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -483,9 +476,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -517,11 +510,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal08Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -536,9 +528,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -574,11 +566,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal09Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -593,9 +584,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -631,11 +622,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal10Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -650,9 +640,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -688,11 +678,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal11Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -707,9 +696,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -739,11 +728,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal12Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.NORMAL);
 		// シャッフル対象数字設定
@@ -787,11 +775,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal13Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -806,9 +793,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -840,11 +827,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal14Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -859,9 +845,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -897,11 +883,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal15Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -916,9 +901,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -954,11 +939,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal16Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -973,9 +957,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1011,11 +995,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal17Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -1030,9 +1013,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1062,11 +1045,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal18Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -1109,11 +1091,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal19Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
@@ -1128,9 +1109,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("9");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1160,11 +1141,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal20Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
@@ -1179,9 +1159,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1211,11 +1191,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal21Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
@@ -1230,9 +1209,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1262,11 +1241,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal22Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
@@ -1281,9 +1259,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("9");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1317,11 +1295,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal23Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.EXHAUSTED);
 		// シャッフル対象数字設定
@@ -1336,9 +1313,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1370,11 +1347,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal24Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
@@ -1389,10 +1365,12 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
-				.thenReturn("1").thenReturn("8");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("8");
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
+		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("8", this.testSuite.getExNum());
@@ -1413,7 +1391,7 @@ public class ChangeOptionUTTest {
 	 * [途中期待値]<br>
 	 * ・交換するかしないかを判断するフラグ関数がfalseになる状態<br>
 	 * [期待値]<br>
-	 * ・交換した数字:nullであること<br>
+	 * ・交換した数字:0(初期化)であること<br>
 	 * ・交換した数字の情報:NOTCLEARであること<br>
 	 * ・交換した桁:-1であること<br>
 	 * ・交換後の数字:345であること(交換されないこと)<br>
@@ -1421,11 +1399,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal25Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
@@ -1438,11 +1415,11 @@ public class ChangeOptionUTTest {
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
 		// 検証
 		this.testSuite.changeLogic();
-		assertNull(this.testSuite.getExNum());
+		assertEquals("0", this.testSuite.getExNum());
 		assertEquals("NOTCLEAR", this.testSuite.getLh());
 		assertEquals(-1, this.testSuite.getDigitInd());
 		assertEquals("345", convertListToString(this.testSuite.getChangedNumberList(), null));
@@ -1470,11 +1447,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal26Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
@@ -1489,10 +1465,12 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
-				.thenReturn("1").thenReturn("2");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("2");
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
+		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("2", this.testSuite.getExNum());
@@ -1523,11 +1501,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal27Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
 		gameMaster.setDifficulty(Const.INSANE);
 		// シャッフル対象数字設定
@@ -1542,10 +1519,12 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
-				.thenReturn("1").thenReturn("4");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("4");
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(1);
+		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("4", this.testSuite.getExNum());
@@ -1583,11 +1562,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal28Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(4);
 		gameMaster.setDifficulty(Const.EASY);
 		// シャッフル対象数字設定
@@ -1603,9 +1581,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("1").thenReturn("6").thenReturn("7").thenReturn("1").thenReturn("9");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(3).thenReturn(1).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1639,11 +1617,10 @@ public class ChangeOptionUTTest {
 	 */
 	@Test
 	final void changeOption_cpuNormal29Test() throws Exception {
-		// 対象名
-		ReflectionTestUtils.setField(this.testSuite, "chkMember", "CPU");
 		// 桁数
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(5);
 		gameMaster.setDifficulty(Const.HARD);
 		// シャッフル対象数字設定
@@ -1660,9 +1637,9 @@ public class ChangeOptionUTTest {
 		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
 		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getStringMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn("8");
-		when(this.mapUtil.getIntegerMapKey(any(), eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
 				.thenReturn(3);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1671,6 +1648,50 @@ public class ChangeOptionUTTest {
 		assertEquals("HIGH", this.testSuite.getLh());
 		assertEquals(-1, this.testSuite.getDigitInd());
 		assertEquals("12689", convertListToString(this.testSuite.getChangedNumberList(), null));
+	}
+
+	/**
+	 * <p>
+	 * CPU正常系30
+	 * </p>
+	 * [初期設定]<br>
+	 * 対象名:CPU<br>
+	 * 難易度:INSANE<br>
+	 * 桁数:3<br>
+	 * チェンジ対象数字:345<br>
+	 * [途中期待値]<br>
+	 * ・交換するかしないかを判断するフラグ関数がfalseになる状態<br>
+	 * [期待値]<br>
+	 * ・交換した数字:nullでないこと<br>
+	 * ・交換した数字の情報:NOTCLEARであること<br>
+	 * ・交換した桁:-1であること<br>
+	 * ・交換後の数字:nullでないこと(交換したかわからないため)<br>
+	 * @throws Exception
+	 */
+	@Test
+	final void changeOption_cpuNormal30Test() throws Exception {
+		// 桁数
+		// 難易度
+		GameMaster gameMaster = spy(new GameMaster());
+		gameMaster.setName(Const.CPU);
+		gameMaster.setDigit(3);
+		gameMaster.setDifficulty(Const.INSANE);
+		// シャッフル対象数字設定
+		ArrayList<String> list = new ArrayList<>();
+		list.add("3");
+		list.add("4");
+		list.add("5");
+		gameMaster.setCorrectCpuNumberList(list);
+		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
+		// 最優先フラグを設定
+		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
+		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
+		// 検証
+		this.testSuite.changeLogic();
+		assertNotNull(this.testSuite.getExNum());
+		assertEquals("NOTCLEAR", this.testSuite.getLh());
+		assertEquals(-1, this.testSuite.getDigitInd());
+		assertNotNull(this.testSuite.getChangedNumberList());
 	}
 
 	/**
@@ -1714,10 +1735,11 @@ public class ChangeOptionUTTest {
 		for (int i = 0; i < list.size(); i++) {
 			String hl = null;
 			Integer num = Integer.parseInt(list.get(i));
-			if (0 <= num.compareTo(Integer.parseInt(Const.ZERO)) && 0 >= num.compareTo(Integer.parseInt(Const.FOUR))) {
+			if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.ZERO.getNum())) &&
+					0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FOUR.getNum()))) {
 				hl = Const.LOW;
-			} else if (0 <= num.compareTo(Integer.parseInt(Const.FIVE))
-					&& 0 >= num.compareTo(Integer.parseInt(Const.NINE))) {
+			} else if (0 <= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.FIVE.getNum()))
+					&& 0 >= num.compareTo(Integer.parseInt(Numer0nSelectNumberEnum.NINE.getNum()))) {
 				hl = Const.HIGH;
 			}
 			hlList.add(hl);
