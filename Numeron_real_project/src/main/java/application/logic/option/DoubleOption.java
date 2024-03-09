@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nDigitEnum;
+import application.component.consts.Numer0nOptionEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -157,11 +158,13 @@ public class DoubleOption {
 			// CPUかplayerによって得られる情報を格納
 			if (Const.CPU.equals(this.getChkMember())) {
 				this.info.addCpuInfoList(Anything.concatStringToComma(
-						Const.DOUBLE, Anything.convertListToString(callNumberList),
+						Numer0nOptionEnum.DOUBLE.getOprionName(),
+						Anything.convertListToString(callNumberList),
 						this.eatBite.getEatBiteResult()));
 			} else {
 				this.info.addPlayerInfoList(Anything.concatStringToComma(
-						Const.DOUBLE, Anything.convertListToString(callNumberList),
+						Numer0nOptionEnum.DOUBLE.getOprionName(),
+						Anything.convertListToString(callNumberList),
 						this.eatBite.getEatBiteResult()));
 			}
 
@@ -188,18 +191,22 @@ public class DoubleOption {
 			if (loop == 2) {
 				if (Const.CPU.equals(this.getChkMember())) {
 					this.info.addPlayerInfoList(Anything.concatStringToComma(
-							Const.DOUBLE, Anything.convertIntegerToString(getDoubleDigit()),
+							Numer0nOptionEnum.DOUBLE.getOprionName(),
+							Anything.convertIntegerToString(getDoubleDigit()),
 							getDoubleNum()));
 					// 情報の大きさを合わせるためハイフンを格納
 					this.info.addPlayerInfoList(Anything.concatStringToComma(
-							Const.DOUBLE, Const.HYPHEN, Const.HYPHEN));
+							Numer0nOptionEnum.DOUBLE.getOprionName(),
+							Const.HYPHEN, Const.HYPHEN));
 				} else {
 					this.info.addCpuInfoList(Anything.concatStringToComma(
-							Const.DOUBLE, Anything.convertIntegerToString(getDoubleDigit()),
+							Numer0nOptionEnum.DOUBLE.getOprionName(),
+							Anything.convertIntegerToString(getDoubleDigit()),
 							getDoubleNum()));
 					// 情報の大きさを合わせるためハイフンを格納
 					this.info.addCpuInfoList(Anything.concatStringToComma(
-							Const.DOUBLE, Const.HYPHEN, Const.HYPHEN));
+							Numer0nOptionEnum.DOUBLE.getOprionName(),
+							Const.HYPHEN, Const.HYPHEN));
 				}
 			}
 

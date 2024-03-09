@@ -17,6 +17,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nOptionEnum;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.logic.game.Numer0n;
 import application.logic.human.Computer;
@@ -83,7 +84,7 @@ public class Numer0nUTTest {
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
 		GameComponentUtil utilMap = spy(new GameComponentUtil());
-		utilMap.addOffenseOptionList(Const.DOUBLE);
+		utilMap.addOffenseOptionList(Numer0nOptionEnum.DOUBLE.getOprionName());
 		ReflectionTestUtils.setField(this.testSuite, "utilMap", utilMap);
 		Player player = spy(new Player(gameMaster, info, utilMap));
 		ArrayList<String> calllist1 = new ArrayList<>();

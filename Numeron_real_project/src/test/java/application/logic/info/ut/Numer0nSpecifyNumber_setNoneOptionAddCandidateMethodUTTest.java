@@ -14,6 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nNextActionFlagEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -90,7 +91,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("123", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -128,7 +129,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(player.getCandidatePlayerNumberList().size() == 0);
 		assertEquals("123", player.getNotCandidatePlayerNumberList().get(0));
@@ -165,7 +166,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("675", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -201,7 +202,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Numer0n_CONTINUE, result);
 		assertEquals("123", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -237,7 +238,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		Integer result = this.testSuite.setNoneOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Numer0n_CONTINUE, result);
 		assertTrue(computer.getCandidateCpuNumberList().size() == 0);
 		assertEquals("834", computer.getNotCandidateCpuNumberList().get(0));

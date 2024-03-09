@@ -41,16 +41,6 @@ public class Const {
 	// ハイフン残留
 	public static final String HYPHEN = "--";
 
-	// アイテム
-	public static final String DOUBLE = "DOUBLE";
-	public static final String HIGH_LOW = "HIGH&LOW";
-	public static final String TARGET = "TARGET";
-	public static final String SLASH = "SLASH";
-	public static final String SHUFFLE = "SHUFFLE";
-	public static final String CHANGE = "CHANGE";
-	// NO_OPTION定数（オプションを使用しない）
-	public static final String NO_OPTION = "NOOPTION";
-
 	// 難易度
 	public static final String EASY = "EASY";
 	public static final String NORMAL = "NORMAL";
@@ -76,12 +66,6 @@ public class Const {
 	// 思い浮かべている数字が5個以下残留
 	public static final int Numer0n_PINCH_NUMBER = 5;
 
-	// 直前の情報用フラグ
-	public static final String LAST_INFO_FLAG = "0";
-	// 今までの情報用フラグ
-	public static final String EVER_INFO_FLAG = "1";
-	// 数字作成用フラグ
-	public static final String MAKE_NUMBER_FLAG = "2";
 	// この数字以外で残留
 	public static final String MAKE_OTHER_THESE_NUMBER = "MAKEOTHERTHISNUMBER";
 }

@@ -14,6 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.Numer0nNextActionFlagEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -80,7 +81,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("123", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -116,7 +117,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("123", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -152,7 +153,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("123", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -188,7 +189,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("123", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -224,7 +225,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -260,7 +261,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("483", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -298,7 +299,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertTrue(player.getCandidatePlayerNumberList().size() == 0);
 		assertTrue(computer.getCandidateCpuNumberList().size() == 0);
@@ -335,7 +336,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -371,7 +372,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("207", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -407,7 +408,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("482", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -443,7 +444,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -479,7 +480,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -515,7 +516,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("879", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -551,7 +552,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -587,7 +588,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("357", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -623,7 +624,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("879", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -659,7 +660,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("436", player.getCandidatePlayerNumberList().get(0));
 		assertEquals("436", player.getNotCandidatePlayerNumberList().get(0));
@@ -696,7 +697,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("436", computer.getCandidateCpuNumberList().get(0));
 		assertEquals("436", computer.getNotCandidateCpuNumberList().get(0));
@@ -733,7 +734,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("188", player.getCandidatePlayerNumberList().get(0));
 		assertEquals("188", player.getNotCandidatePlayerNumberList().get(0));
@@ -770,7 +771,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("188", computer.getCandidateCpuNumberList().get(0));
 		assertEquals("188", computer.getNotCandidateCpuNumberList().get(0));
@@ -807,7 +808,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("217", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -843,7 +844,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("512", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -879,7 +880,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("976", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -915,7 +916,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("217", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -951,7 +952,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("512", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -987,7 +988,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("976", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -1023,7 +1024,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("754", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1059,7 +1060,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("467", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -1095,7 +1096,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertTrue(player.getCandidatePlayerNumberList().size() == 0);
 		assertTrue(player.getNotCandidatePlayerNumberList().size() == 0);
@@ -1132,7 +1133,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("754", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1168,7 +1169,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("467", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -1204,7 +1205,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("317", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1240,7 +1241,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("865", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -1276,7 +1277,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("548", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1312,7 +1313,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("814", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -1348,7 +1349,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("418", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1384,7 +1385,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("785", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1420,7 +1421,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("785", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1456,7 +1457,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("848", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1492,7 +1493,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("427", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -1528,7 +1529,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("359", player.getCandidatePlayerNumberList().get(0));
 	}
@@ -1564,7 +1565,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("902", player.getNotCandidatePlayerNumberList().get(0));
 	}
@@ -1600,7 +1601,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("317", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1636,7 +1637,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("865", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -1672,7 +1673,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("548", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1708,7 +1709,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("814", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -1744,7 +1745,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("418", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1780,7 +1781,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("785", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1816,7 +1817,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("785", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1852,7 +1853,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("848", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1888,7 +1889,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("427", computer.getNotCandidateCpuNumberList().get(0));
 	}
@@ -1924,7 +1925,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("359", computer.getCandidateCpuNumberList().get(0));
 	}
@@ -1960,7 +1961,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
 		int result = this.testSuite.setOptionAddCandidateMethod(
-				info, chkNumber, Const.LAST_INFO_FLAG);
+				info, chkNumber, Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 		assertEquals(Const.MATCH, result);
 		assertEquals("902", computer.getNotCandidateCpuNumberList().get(0));
 	}

@@ -5,7 +5,7 @@ package application.component.consts;
  * @author shiraishitoshio
  *
  */
-public enum Numer0nFlagEnum {
+public enum Numer0nNextActionFlagEnum {
 
 	/** 0:info情報の最後の情報のみ使用 */
 	LAST_INFO_FLAG("0", "最後の情報使用"),
@@ -24,7 +24,7 @@ public enum Numer0nFlagEnum {
 	 * @param oprionCd フラグコード
 	 * @param abb フラグコードの略称
 	 */
-	Numer0nFlagEnum(final String flagCd, final String abb) {
+	Numer0nNextActionFlagEnum(final String flagCd, final String abb) {
 		this.flagCd = flagCd;
 		this.abb = abb;
 	}

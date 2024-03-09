@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nChangeEnum;
+import application.component.consts.Numer0nNextActionFlagEnum;
+import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.consts.Numer0nTargetEnum;
 import application.logic.human.Computer;
@@ -95,18 +97,18 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 						chkNumber.append(istr).append(jstr).append(kstr);
 
 						// 条件に合う数値を作成するフラグの場合
-						if (Const.MAKE_NUMBER_FLAG.equals(item)) {
+						if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 							int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 									gameMaster);
 							if (makeNumberResult == Const.MATCH) {
 								this.conditionNumberList.add(chkNumber.toString());
 							}
 							// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
-						} else if (Const.NO_OPTION.equals(item)) {
-							setNoneOptionAddCandidateMethod(info, chkNumber.toString(), Const.LAST_INFO_FLAG);
+						} else if (Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
+							setNoneOptionAddCandidateMethod(info, chkNumber.toString(), Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 							// オプション使用あり用（DOUBLEのサイズが3も含む）
 						} else {
-							setOptionAddCandidateMethod(info, chkNumber.toString(), Const.LAST_INFO_FLAG);
+							setOptionAddCandidateMethod(info, chkNumber.toString(), Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 						}
 						// 確認数字を初期化
 						chkNumber.delete(0, chkNumber.length());
@@ -134,18 +136,18 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 							chkNumber.append(istr).append(jstr).append(kstr).append(lstr);
 
 							// 条件に合う数値を作成するフラグの場合
-							if (Const.MAKE_NUMBER_FLAG.equals(item)) {
+							if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 								int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 										gameMaster);
 								if (makeNumberResult == Const.MATCH) {
 									this.conditionNumberList.add(chkNumber.toString());
 								}
 								// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
-							} else if (Const.NO_OPTION.equals(item)) {
-								setNoneOptionAddCandidateMethod(info, chkNumber.toString(), Const.LAST_INFO_FLAG);
+							} else if (Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
+								setNoneOptionAddCandidateMethod(info, chkNumber.toString(), Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 								// オプション使用あり用（DOUBLEのサイズが3も含む）
 							} else {
-								setOptionAddCandidateMethod(info, chkNumber.toString(), Const.LAST_INFO_FLAG);
+								setOptionAddCandidateMethod(info, chkNumber.toString(), Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 							}
 
 							// 確認数字を初期化
@@ -177,20 +179,20 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 								chkNumber.append(istr).append(jstr).append(kstr).append(lstr).append(mstr);
 
 								// 条件に合う数値を作成するフラグの場合
-								if (Const.MAKE_NUMBER_FLAG.equals(item)) {
+								if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 									int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 											gameMaster);
 									if (makeNumberResult == Const.MATCH) {
 										this.conditionNumberList.add(chkNumber.toString());
 									}
 									// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
-								} else if (Const.NO_OPTION.equals(item)) {
+								} else if (Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
 									setNoneOptionAddCandidateMethod(info, chkNumber.toString(),
-											Const.LAST_INFO_FLAG);
+											Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 									// オプション使用あり用（DOUBLEのサイズが3も含む）
 								} else {
 									setOptionAddCandidateMethod(info, chkNumber.toString(),
-											Const.LAST_INFO_FLAG);
+											Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd());
 								}
 
 								// 確認数字を初期化
@@ -267,7 +269,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		}
 
 		// 条件に合致していたらMATCH
-		if (Const.EVER_INFO_FLAG.equals(flag)) {
+		if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 			if (confNumber) {
 				return Const.MATCH;
 			} else {
@@ -318,14 +320,13 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 	public int setOptionAddCandidateMethod(String info, String chkNumber, String flag) {
 		ArrayList<String> infoList = Anything.splitComma(info);
 		boolean everFlag = true;
-		switch (infoList.get(0)) {
-		case Const.DOUBLE:
+		if (Numer0nOptionEnum.DOUBLE.getOprionName().equals(infoList.get(0))) {
 			// DOUBLE（[DOUBLE,0,1]（桁、その数字））の形式か
 			if (!infoList.get(2).contains(Const.EAT)) {
 				// infoにある情報と同じであるか
 				int dig = Anything.convertStringToInteger(infoList.get(1));
 				if (chkNumber.substring(dig, dig + 1).equals(infoList.get(2))) {
-					if (Const.LAST_INFO_FLAG.equals(flag)) {
+					if (Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd().equals(flag)) {
 						if (Const.CPU.equals(this.gameMaster.getName())) {
 							this.computer.addCandidateNumberList(chkNumber);
 							if (this.computer.getNotCandidateCpuNumberList().contains(chkNumber)) {
@@ -339,7 +340,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 						}
 					}
 				} else {
-					if (Const.EVER_INFO_FLAG.equals(flag)) {
+					if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 						everFlag = false;
 					} else {
 						if (Const.CPU.equals(this.gameMaster.getName())) {
@@ -360,14 +361,13 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 			} else {
 				// EVER_INFO_FLAGかつ得られているDOUBLE情報にMATCHしていない場合、everFlagをfalse（対象外）
 				int noneResult = setNoneOptionAddCandidateMethod(info, chkNumber, flag);
-				if (Const.EVER_INFO_FLAG.equals(flag) &&
+				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag) &&
 						noneResult == Const.NOT_MATCH) {
 					everFlag = false;
 				}
 			}
-			break;
 		// CHANGE（[CHANGE,DONTTEACHINDEX,HIGH]（桁、HIGHかLOWか））の形式か
-		case Const.CHANGE:
+		} else if (Numer0nOptionEnum.CHANGE.getOprionName().equals(infoList.get(0))) {
 			// [CHANGE,--]の場合は、特に判断できないため、スキップ
 			if (infoList.size() == 2) {
 				return Const.MATCH;
@@ -379,7 +379,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					infoList.get(2));
 			// 一致しなかった場合、除去対象
 			if (Const.NOT_CONSISTENT.equals(judgeChangeTfResult)) {
-				if (Const.EVER_INFO_FLAG.equals(flag)) {
+				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 					everFlag = false;
 				} else {
 					if (Const.CPU.equals(this.gameMaster.getName())) {
@@ -396,7 +396,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 				}
 				// 一致した場合、候補対象
 			} else if (Const.CONSISTENT.equals(judgeChangeTfResult)) {
-				if (Const.LAST_INFO_FLAG.equals(flag)) {
+				if (Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd().equals(flag)) {
 					if (Const.CPU.equals(this.gameMaster.getName())) {
 						this.computer.addCandidateNumberList(chkNumber);
 						if (this.computer.getNotCandidateCpuNumberList().contains(chkNumber)) {
@@ -421,10 +421,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					this.player.addNotCandidateNumberList(chkNumber);
 				}
 			}
-			break;
 		// HIGH&LOW（[HIGH&LOW,LOW,LOW,LOW,LOW,HIGH]（左からHIGHかLOWか））の形式か
-		case Const.HIGH_LOW:
-			if (Const.EVER_INFO_FLAG.equals(flag)) {
+		} else if (Numer0nOptionEnum.HIGHLOW.getOprionName().equals(infoList.get(0))) {
+			if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 				if (!judgeHighLowTF(
 						Anything.convertNumberToArrayList(chkNumber), infoList)) {
 					everFlag = false;
@@ -458,10 +457,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					}
 				}
 			}
-			break;
 		// SLASH（[SLASH,3]（スラッシュナンバー））の形式か
-		case Const.SLASH:
-			if (Const.EVER_INFO_FLAG.equals(flag)) {
+		} else if (Numer0nOptionEnum.SLASH.getOprionName().equals(infoList.get(0))) {
+			if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 				ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
 				if (Integer.parseInt(Collections.max(numList)) - Integer.parseInt(Collections.min(numList))
 						!= Integer.parseInt(infoList.get(1))) {
@@ -503,11 +501,10 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					}
 				}
 			}
-			break;
 		// [TARGET,2,EXISTLISTOFNUMBER,4]（オプション、桁、存在するか？、宣言した数字）の形式か
-		case Const.TARGET:
+		} else if (Numer0nOptionEnum.TARGET.getOprionName().equals(infoList.get(0))) {
 			if (Numer0nTargetEnum.NONE_EXIST_LIST_OF_NUMBER.getAbb().equals(infoList.get(2))) {
-				if (Const.EVER_INFO_FLAG.equals(flag)) {
+				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 					// 宣言した数字が数値リストに存在した場合、対象外（存在しないことがわかっているため）
 					// everFlag = false→NOT_MATCH（満たしていないため削除対象）
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
@@ -583,7 +580,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 				}
 				// コール用数字として候補リストに格納
 			} else {
-				if (Const.EVER_INFO_FLAG.equals(flag)) {
+				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 					// 宣言した数字が数値リストに存在しない場合、対象外（存在することがわかっているため）
 					// everFlag = false→NOT_MATCH（満たしていないため削除対象）
 					ArrayList<String> numList = Anything.convertNumberToArrayList(chkNumber);
@@ -659,7 +656,6 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					}
 				}
 			}
-			break;
 		}
 
 		if (everFlag) {
