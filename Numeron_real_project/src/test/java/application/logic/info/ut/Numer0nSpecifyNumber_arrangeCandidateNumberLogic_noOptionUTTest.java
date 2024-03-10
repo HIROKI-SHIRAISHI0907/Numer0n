@@ -14,7 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.anything.Anything;
-import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -74,7 +74,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,348,0EAT0BITE";
@@ -112,7 +112,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,194,1EAT2BITE";
@@ -154,7 +154,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,532,0EAT1BITE";
@@ -204,7 +204,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,895,0EAT2BITE";
@@ -243,7 +243,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,632,1EAT1BITE";
@@ -282,7 +282,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,739,1EAT0BITE";
@@ -331,7 +331,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,3176,0EAT0BITE";
@@ -374,7 +374,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,2831,1EAT3BITE";
@@ -421,7 +421,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,0386,0EAT1BITE";
@@ -471,7 +471,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,4067,0EAT3BITE";
@@ -510,7 +510,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,9478,2EAT1BITE";
@@ -549,7 +549,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,8127,2EAT0BITE";
@@ -588,7 +588,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,9481,1EAT2BITE";
@@ -627,7 +627,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,6048,1EAT1BITE";
@@ -666,7 +666,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,7390,0EAT2BITE";
@@ -705,7 +705,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,0812,1EAT0BITE";
@@ -744,7 +744,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,6749,2EAT2BITE";
@@ -783,7 +783,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,6389,0EAT4BITE";
@@ -822,7 +822,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,14257,4EAT0BITE";
@@ -861,7 +861,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,38916,3EAT0BITE";
@@ -900,7 +900,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,57821,3EAT1BITE";
@@ -939,7 +939,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,90124,3EAT2BITE";
@@ -978,7 +978,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,67124,2EAT0BITE";
@@ -1017,7 +1017,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,91276,2EAT1BITE";
@@ -1056,7 +1056,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,90347,2EAT2BITE";
@@ -1095,7 +1095,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,10547,2EAT3BITE";
@@ -1134,7 +1134,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,84609,1EAT0BITE";
@@ -1173,7 +1173,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,27845,1EAT1BITE";
@@ -1212,7 +1212,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,67245,1EAT2BITE";
@@ -1251,7 +1251,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,89012,1EAT3BITE";
@@ -1290,7 +1290,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,71293,1EAT4BITE";
@@ -1329,7 +1329,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,01378,0EAT0BITE";
@@ -1368,7 +1368,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,82467,0EAT1BITE";
@@ -1407,7 +1407,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,75901,0EAT2BITE";
@@ -1446,7 +1446,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,19034,0EAT3BITE";
@@ -1485,7 +1485,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,98532,0EAT4BITE";
@@ -1524,7 +1524,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_noOptionUTTest ext
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "NOOPTION,14782,0EAT5BITE";

@@ -41,13 +41,6 @@ public class Const {
 	// ハイフン残留
 	public static final String HYPHEN = "--";
 
-	// 難易度
-	public static final String EASY = "EASY";
-	public static final String NORMAL = "NORMAL";
-	public static final String HARD = "HARD";
-	public static final String EXHAUSTED = "EXHAUSTED";
-	public static final String INSANE = "INSANE";
-
 	// 対象外の桁やフラグ残留
 	public static final int YUUSEN_MINUS = -1;
 	// 最優先残留

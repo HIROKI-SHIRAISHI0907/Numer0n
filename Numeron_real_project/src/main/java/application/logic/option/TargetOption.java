@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.GameMaster;
 import application.logic.option.map.TargetOptionMapUtil;
 import lombok.Getter;
@@ -111,8 +112,8 @@ public class TargetOption {
 
 			// EXHAUSTED,INSANEは-1(初期化)に戻す
 			switch (this.gameMaster.getDifficulty()) {
-			case Const.EXHAUSTED:
-			case Const.INSANE:
+			case DifficultyConst.EXHAUSTED:
+			case DifficultyConst.INSANE:
 				existsInd = -1;
 				break;
 			}

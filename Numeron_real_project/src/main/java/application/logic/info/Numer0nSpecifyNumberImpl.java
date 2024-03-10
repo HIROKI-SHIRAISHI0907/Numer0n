@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nNextActionFlagEnum;
 import application.component.consts.Numer0nOptionEnum;
@@ -87,7 +88,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 
 						// 全ての数字が異なっていない場合スキップ（難易度INSANEは除外）
 						if ((i == j || j == k || k == i)
-								&& !Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+								&& !DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 							continue;
 						}
 
@@ -125,7 +126,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 
 							// 全ての数字が異なっていない場合スキップ（難易度INSANEは除外）
 							if ((i == j || j == k || k == l || l == i || i == k || j == l)
-									&& !Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+									&& !DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 								continue;
 							}
 
@@ -167,7 +168,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 								// 全ての数字が異なっていない場合スキップ（難易度INSANEは除外）
 								if ((i == j || j == k || k == l || l == m || m == i
 										|| i == k || j == l || i == k || j == m || i == l)
-										&& !Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+										&& !DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 									continue;
 								}
 

@@ -19,6 +19,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.GameMaster;
 import application.logic.option.ShuffleOption;
 import application.logic.option.map.ShuffleOptionMapUtil;
@@ -103,7 +104,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -134,7 +135,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -166,7 +167,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -204,7 +205,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -242,7 +243,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -277,7 +278,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -308,7 +309,7 @@ public class ShuffleOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");

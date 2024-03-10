@@ -14,6 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -74,7 +75,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,LOW";
@@ -113,7 +114,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,HIGH";
@@ -152,7 +153,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,LOW";
@@ -191,7 +192,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,HIGH";
@@ -229,7 +230,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,NOTCLEAR";
@@ -267,7 +268,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,NOTCLEAR";
@@ -308,7 +309,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,LOW";
@@ -352,7 +353,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,0,HIGH";
@@ -394,7 +395,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,--";
@@ -430,7 +431,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,LOW";
@@ -469,7 +470,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,HIGH";
@@ -508,7 +509,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,LOW";
@@ -547,7 +548,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,HIGH";
@@ -585,7 +586,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,NOTCLEAR";
@@ -623,7 +624,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,DONTTEACHINDEX,NOTCLEAR";
@@ -664,7 +665,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,1,LOW";
@@ -708,7 +709,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_changeUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "CHANGE,0,HIGH";

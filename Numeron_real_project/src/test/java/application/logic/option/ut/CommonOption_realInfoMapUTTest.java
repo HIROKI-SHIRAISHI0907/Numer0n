@@ -16,6 +16,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nOptionEnum;
@@ -101,7 +102,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -169,7 +170,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -232,7 +233,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("9");
@@ -282,7 +283,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("7");
@@ -332,7 +333,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("8");
@@ -384,7 +385,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("5");
@@ -440,7 +441,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("9");
@@ -493,7 +494,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -559,7 +560,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -622,7 +623,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("9");
@@ -672,7 +673,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("7");
@@ -722,7 +723,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("8");
@@ -774,7 +775,7 @@ public class CommonOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// 事前提供対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("5");

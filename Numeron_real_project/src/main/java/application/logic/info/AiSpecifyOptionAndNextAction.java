@@ -50,18 +50,6 @@ public class AiSpecifyOptionAndNextAction {
 			put(Const.NINE, 0);
 		}
 	};
-	// 攻撃オプション
-	private String[] offenseList = {
-		Const.DOUBLE,
-		Const.HIGH_LOW,
-		Const.TARGET,
-		Const.SLASH
-	};
-	// 防御オプション
-	private String[] diffenseList = {
-		Const.SHUFFLE,
-		Const.CHANGE
-	};
 
 	// シャッフルする
 	private static final String SHUFFLE_GO = "1";

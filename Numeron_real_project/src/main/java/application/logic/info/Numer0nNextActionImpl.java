@@ -2,7 +2,7 @@ package application.logic.info;
 
 import org.springframework.stereotype.Service;
 
-import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.error.Numer0nUncontinuableException;
 import application.logic.db.logic.DbAccessor;
 import application.logic.human.GameMaster;
@@ -60,19 +60,19 @@ public class Numer0nNextActionImpl implements Numer0nNextAction {
 
 		try {
 			switch (this.gameMaster.getDifficulty()) {
-				case Const.NORMAL:
+				case DifficultyConst.NORMAL:
 					this.specifyNumber.arrangeCandidateNumberLogic(
 							this.info.getCpuInfoList().get(0));
 					break;
-				case Const.HARD:
+				case DifficultyConst.HARD:
 					this.specifyNumberMultiple.arrangeCandidateNumberMultipleConfirmationLogic();
 					break;
-				case Const.EXHAUSTED:
+				case DifficultyConst.EXHAUSTED:
 					this.specifyNumberMultiple.arrangeCandidateNumberMultipleConfirmationLogic();
 					this.dbAccessor.numer0nInsert(null, null);
 					this.flagMap.setFlagLogic();
 					break;
-				case Const.INSANE:
+				case DifficultyConst.INSANE:
 					this.specifyNumberMultiple.arrangeCandidateNumberMultipleConfirmationLogic();
 					this.dbAccessor.numer0nInsert(null, null);
 					// AI入れる

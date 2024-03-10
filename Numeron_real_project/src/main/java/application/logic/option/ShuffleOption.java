@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nShuffleEnum;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
@@ -82,12 +83,12 @@ public class ShuffleOption {
 				chkListParameter(shuffleNumberList);
 
 				switch (this.gameMaster.getDifficulty()) {
-				case Const.EASY:
-				case Const.NORMAL:
+				case DifficultyConst.EASY:
+				case DifficultyConst.NORMAL:
 					shuffleNumberList = doShuffle(shuffleNumberList);
 					break;
-				case Const.HARD:
-				case Const.EXHAUSTED:
+				case DifficultyConst.HARD:
+				case DifficultyConst.EXHAUSTED:
 					// 必ずシャッフルされるとは限らない
 					Collections.shuffle(shuffleNumberList);
 					break;

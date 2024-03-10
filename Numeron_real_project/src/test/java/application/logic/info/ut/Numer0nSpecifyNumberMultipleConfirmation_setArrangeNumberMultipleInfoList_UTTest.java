@@ -17,10 +17,10 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
-import application.logic.info.Numer0nInfo;
 import application.logic.info.Numer0nInfo;
 import application.logic.info.Numer0nSpecifyNumber;
 import application.logic.info.Numer0nSpecifyNumberMultipleConfirmationImpl;
@@ -98,7 +98,7 @@ public class Numer0nSpecifyNumberMultipleConfirmation_setArrangeNumberMultipleIn
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 情報設定
 		Numer0nInfo info = spy(new Numer0nInfo());
@@ -145,7 +145,7 @@ public class Numer0nSpecifyNumberMultipleConfirmation_setArrangeNumberMultipleIn
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 情報設定
 		Numer0nInfo info = spy(new Numer0nInfo());

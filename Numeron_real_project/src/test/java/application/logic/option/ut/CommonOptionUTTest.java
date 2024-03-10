@@ -16,6 +16,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nOptionEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
@@ -165,7 +166,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
@@ -191,7 +192,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
@@ -216,7 +217,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.HIGHLOW.getOprionName());
@@ -239,7 +240,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SLASH.getOprionName());
@@ -262,7 +263,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.TARGET.getOprionName());
@@ -285,7 +286,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.CHANGE.getOprionName());
@@ -308,7 +309,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SLASH.getOprionName());
@@ -331,7 +332,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SHUFFLE.getOprionName());
@@ -355,7 +356,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
@@ -381,7 +382,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
@@ -406,7 +407,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.HIGHLOW.getOprionName());
@@ -429,7 +430,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SLASH.getOprionName());
@@ -452,7 +453,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.targetOption.getExistsInd()).thenReturn(2);
@@ -477,7 +478,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.changeOption.getDigitInd()).thenReturn(1);
@@ -502,7 +503,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SLASH.getOprionName());
@@ -525,7 +526,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SHUFFLE.getOprionName());
@@ -548,7 +549,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.targetOption.getExistsInd()).thenReturn(-1);
@@ -573,7 +574,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
 		when(this.changeOption.getDigitInd()).thenReturn(-1);
@@ -599,7 +600,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.SHUFFLE.getOprionName());
@@ -623,7 +624,7 @@ public class CommonOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);

@@ -14,6 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -74,7 +75,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,HIGH";
@@ -113,7 +114,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,LOW";
@@ -152,7 +153,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,HIGH";
@@ -191,7 +192,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,LOW";
@@ -230,7 +231,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,HIGH,LOW";
@@ -269,7 +270,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,HIGH,HIGH";
@@ -308,7 +309,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,HIGH,LOW";
@@ -347,7 +348,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,HIGH,HIGH";
@@ -386,7 +387,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,HIGH,LOW,HIGH,LOW";
@@ -425,7 +426,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,LOW,LOW,LO";
@@ -464,7 +465,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,HIGH,LOW,HIGH,LOW";
@@ -503,7 +504,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,LOW,LOW,LOW,LOW";
@@ -544,7 +545,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,HIGH,LOW";
@@ -588,7 +589,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,LOW,HIGH,LOW";
@@ -632,7 +633,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,LOW";
@@ -676,7 +677,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "HIGH&LOW,HIGH,HIGH,LOW";

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
@@ -106,7 +107,7 @@ public class ChangeOption {
 		try {
 			if (Const.CPU.equals(this.getChkMember())) {
 				boolean changeFlag = false;
-				if (Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+				if (DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 					// 交換するかどうか
 					if (getDoChangeFlag()) {
 						changeFlag = true;
@@ -155,9 +156,9 @@ public class ChangeOption {
 						// 難易度に応じて数値チェック
 						// EASY,NORMAL,HARD
 						switch (this.gameMaster.getDifficulty()) {
-						case Const.EASY:
-						case Const.NORMAL:
-						case Const.HARD:
+						case DifficultyConst.EASY:
+						case DifficultyConst.NORMAL:
+						case DifficultyConst.HARD:
 							// 交換する数値がLOWナンバー同士・HIGHナンバー同士か
 							hLTf = judgeExchangeSameHighLowNumber(
 									exNum, changedNumberList.get(digitInd));
@@ -170,7 +171,7 @@ public class ChangeOption {
 							break;
 
 						// EXHAUSTED
-						case Const.EXHAUSTED:
+						case DifficultyConst.EXHAUSTED:
 							// 交換する数値がLOWナンバー同士・HIGHナンバー同士でなくても良い
 							hLTf = true;
 
@@ -207,17 +208,17 @@ public class ChangeOption {
 			}
 
 			// HARDは桁の位置を教えないため、初期化
-			if (Const.HARD.equals(this.gameMaster.getDifficulty())) {
+			if (DifficultyConst.HARD.equals(this.gameMaster.getDifficulty())) {
 				digitInd = -1;
 			}
 
 			// EXHAUSTEDは交換した数値の情報を教えないため、初期化
-			if (Const.EXHAUSTED.equals(this.gameMaster.getDifficulty())) {
+			if (DifficultyConst.EXHAUSTED.equals(this.gameMaster.getDifficulty())) {
 				lh = Numer0nChangeEnum.NOT_CLEAR.getAbb();
 			}
 
 			// INSANEは何も教えないため、全て初期化
-			if (Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+			if (DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 				digitInd = -1;
 				lh = Numer0nChangeEnum.NOT_CLEAR.getAbb();
 			}

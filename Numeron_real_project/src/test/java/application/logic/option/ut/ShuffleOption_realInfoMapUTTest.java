@@ -15,6 +15,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nShuffleEnum;
 import application.logic.human.GameMaster;
 import application.logic.option.ShuffleOption;
@@ -55,7 +56,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -91,7 +92,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -127,7 +128,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -163,7 +164,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -199,7 +200,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -236,7 +237,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
@@ -273,7 +274,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
 		gameMaster.setName(Const.CPU);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();

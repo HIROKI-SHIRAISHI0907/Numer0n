@@ -24,6 +24,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.message.MessageAccessor;
 import application.logic.human.GameMaster;
@@ -107,7 +108,7 @@ public class ChangeOptionUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("8");
@@ -146,7 +147,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -198,7 +199,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -254,7 +255,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -310,7 +311,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -366,7 +367,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -416,7 +417,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -463,7 +464,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -515,7 +516,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -571,7 +572,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -627,7 +628,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -683,7 +684,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -733,7 +734,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.NORMAL);
+		gameMaster.setDifficulty(DifficultyConst.NORMAL);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -780,7 +781,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -832,7 +833,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -888,7 +889,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -944,7 +945,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1000,7 +1001,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1050,7 +1051,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1096,7 +1097,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1146,7 +1147,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1196,7 +1197,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1246,7 +1247,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1300,7 +1301,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EXHAUSTED);
+		gameMaster.setDifficulty(DifficultyConst.EXHAUSTED);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1352,7 +1353,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1404,7 +1405,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1452,7 +1453,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1506,7 +1507,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
@@ -1567,7 +1568,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(4);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -1622,7 +1623,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(5);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("1");
@@ -1675,7 +1676,7 @@ public class ChangeOptionUTTest {
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");

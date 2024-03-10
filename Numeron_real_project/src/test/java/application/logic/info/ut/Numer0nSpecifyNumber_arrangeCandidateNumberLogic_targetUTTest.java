@@ -14,6 +14,7 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -74,7 +75,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,2";
@@ -113,7 +114,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,NONEEXISTLISTOFNUMBER,9";
@@ -152,7 +153,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,5";
@@ -191,7 +192,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,7";
@@ -231,7 +232,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,2";
@@ -274,7 +275,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,NONEEXISTLISTOFNUMBER,9";
@@ -317,7 +318,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,4";
@@ -360,7 +361,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,4";
@@ -403,7 +404,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,3";
@@ -446,7 +447,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,9";
@@ -489,7 +490,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,2,NONEEXISTLISTOFNUMBER,9";
@@ -532,7 +533,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,5";
@@ -575,7 +576,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(PLAYER);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,8";
@@ -617,7 +618,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,2";
@@ -656,7 +657,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,NONEEXISTLISTOFNUMBER,9";
@@ -695,7 +696,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,5";
@@ -734,7 +735,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.HARD);
+		gameMaster.setDifficulty(DifficultyConst.HARD);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,7";
@@ -774,7 +775,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,2";
@@ -817,7 +818,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,NONEEXISTLISTOFNUMBER,9";
@@ -860,7 +861,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,4";
@@ -903,7 +904,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,4";
@@ -946,7 +947,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,3";
@@ -989,7 +990,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,NONEEXISTLISTOFNUMBER,9";
@@ -1032,7 +1033,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,2,NONEEXISTLISTOFNUMBER,9";
@@ -1075,7 +1076,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.INSANE);
+		gameMaster.setDifficulty(DifficultyConst.INSANE);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,DONTTEACHINDEX,EXISTLISTOFNUMBER,5";
@@ -1118,7 +1119,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_targetUTTest exten
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setName(Const.CPU);
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// info
 		String info = "TARGET,1,EXISTLISTOFNUMBER,8";

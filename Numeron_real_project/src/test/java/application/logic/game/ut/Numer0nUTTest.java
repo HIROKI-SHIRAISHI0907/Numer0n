@@ -16,7 +16,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.logic.game.Numer0n;
@@ -146,7 +146,7 @@ public class Numer0nUTTest {
 		// 難易度
 		GameMaster gameMaster = spy(new GameMaster());
 		gameMaster.setDigit(3);
-		gameMaster.setDifficulty(Const.EASY);
+		gameMaster.setDifficulty(DifficultyConst.EASY);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
 		list.add("3");
