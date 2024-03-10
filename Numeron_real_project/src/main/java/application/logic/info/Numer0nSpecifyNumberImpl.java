@@ -17,6 +17,7 @@ import application.component.consts.Numer0nNextActionFlagEnum;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.consts.Numer0nTargetEnum;
+import application.component.consts.OtherMatchFlagConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -39,11 +40,6 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 	 * ランダムNo.（10）
 	 */
 	private static final int RANDOM_NUMBER_TEN = 10;
-
-	/**
-	 * Numer0n続行
-	 */
-	private static final Integer Numer0n_CONTINUE = 0;
 
 	/**
 	 * Playerクラス
@@ -101,7 +97,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 						if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 							int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 									gameMaster);
-							if (makeNumberResult == Const.MATCH) {
+							if (makeNumberResult == OtherMatchFlagConst.MATCH) {
 								this.conditionNumberList.add(chkNumber.toString());
 							}
 							// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
@@ -140,7 +136,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 							if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 								int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 										gameMaster);
-								if (makeNumberResult == Const.MATCH) {
+								if (makeNumberResult == OtherMatchFlagConst.MATCH) {
 									this.conditionNumberList.add(chkNumber.toString());
 								}
 								// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
@@ -183,7 +179,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 								if (Numer0nNextActionFlagEnum.MAKE_NUMBER_FLAG.getFlagCd().equals(item)) {
 									int makeNumberResult = notConditionMakeNumber(info, chkNumber.toString(),
 											gameMaster);
-									if (makeNumberResult == Const.MATCH) {
+									if (makeNumberResult == OtherMatchFlagConst.MATCH) {
 										this.conditionNumberList.add(chkNumber.toString());
 									}
 									// オプション使用なし用（DOUBLEの場合、サイズがEATBITE情報が格納済みのもののみ）
@@ -272,9 +268,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		// 条件に合致していたらMATCH
 		if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 			if (confNumber) {
-				return Const.MATCH;
+				return OtherMatchFlagConst.MATCH;
 			} else {
-				return Const.NOT_MATCH;
+				return OtherMatchFlagConst.NOT_MATCH;
 			}
 		}
 
@@ -310,7 +306,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		}
 
 		// 処理を続ける
-		return Numer0n_CONTINUE;
+		return OtherMatchFlagConst.Numer0n_CONTINUE;
 
 	}
 
@@ -363,7 +359,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 				// EVER_INFO_FLAGかつ得られているDOUBLE情報にMATCHしていない場合、everFlagをfalse（対象外）
 				int noneResult = setNoneOptionAddCandidateMethod(info, chkNumber, flag);
 				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag) &&
-						noneResult == Const.NOT_MATCH) {
+						noneResult == OtherMatchFlagConst.NOT_MATCH) {
 					everFlag = false;
 				}
 			}
@@ -371,7 +367,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		} else if (Numer0nOptionEnum.CHANGE.getOprionName().equals(infoList.get(0))) {
 			// [CHANGE,--]の場合は、特に判断できないため、スキップ
 			if (infoList.size() == 2) {
-				return Const.MATCH;
+				return OtherMatchFlagConst.MATCH;
 			}
 
 			String judgeChangeTfResult = judgeChangeTF(
@@ -379,7 +375,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					infoList.get(1),
 					infoList.get(2));
 			// 一致しなかった場合、除去対象
-			if (Const.NOT_CONSISTENT.equals(judgeChangeTfResult)) {
+			if (OtherMatchFlagConst.NOT_CONSISTENT.equals(judgeChangeTfResult)) {
 				if (Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd().equals(flag)) {
 					everFlag = false;
 				} else {
@@ -396,7 +392,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 					}
 				}
 				// 一致した場合、候補対象
-			} else if (Const.CONSISTENT.equals(judgeChangeTfResult)) {
+			} else if (OtherMatchFlagConst.CONSISTENT.equals(judgeChangeTfResult)) {
 				if (Numer0nNextActionFlagEnum.LAST_INFO_FLAG.getFlagCd().equals(flag)) {
 					if (Const.CPU.equals(this.gameMaster.getName())) {
 						this.computer.addCandidateNumberList(chkNumber);
@@ -470,7 +466,7 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 			} else {
 				// [SLASH,--]はスキップ
 				if (Const.HYPHEN.equals(infoList.get(1))) {
-					return Const.MATCH;
+					return OtherMatchFlagConst.MATCH;
 				}
 
 				if (Integer.parseInt(Collections.max(Anything.convertNumberToArrayList(chkNumber)))
@@ -660,9 +656,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		}
 
 		if (everFlag) {
-			return Const.MATCH;
+			return OtherMatchFlagConst.MATCH;
 		} else {
-			return Const.NOT_MATCH;
+			return OtherMatchFlagConst.NOT_MATCH;
 		}
 	}
 
@@ -691,13 +687,13 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 			if (conditionMap.containsKey(Const.MAKE_OTHER_THESE_NUMBER)) {
 				if (conditionMap.containsValue(numStr)) {
 					// 当てはまった数字がある時点で条件に合ってしまっているためNOT_MATCH
-					return Const.NOT_MATCH;
+					return OtherMatchFlagConst.NOT_MATCH;
 				}
 			}
 		}
 
 		// 当てはまる数字がない場合、MATCH
-		return Const.MATCH;
+		return OtherMatchFlagConst.MATCH;
 
 	}
 
@@ -788,9 +784,9 @@ public class Numer0nSpecifyNumberImpl implements Numer0nSpecifyNumber {
 		}
 
 		if (tf) {
-			return Const.CONSISTENT;
+			return OtherMatchFlagConst.CONSISTENT;
 		} else {
-			return Const.NOT_CONSISTENT;
+			return OtherMatchFlagConst.NOT_CONSISTENT;
 		}
 
 	}

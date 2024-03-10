@@ -7,7 +7,7 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
-import application.component.consts.Const;
+import application.component.consts.Numer0nOptionEnum;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
 import lombok.Getter;
@@ -93,7 +93,7 @@ public class Player extends Human {
 			}
 		}
 		String item = this.UtilMap.getPlayerOffense(op);
-		if (!Const.NO_OPTION.equals(item)) {
+		if (!Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
 			this.UtilMap.removeOffenseOptionList(op);
 		}
 		return item;
@@ -119,7 +119,7 @@ public class Player extends Human {
 			}
 		}
 		String item = this.UtilMap.getCpuOffense(op);
-		if (!Const.NO_OPTION.equals(item)) {
+		if (!Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
 			this.UtilMap.removeDiffenseOptionList(op);
 		}
 		return item;
@@ -141,8 +141,8 @@ public class Player extends Human {
 		// 攻撃選択
 		while (true) {
 			int ind = new Random().nextInt(this.UtilMap.getOptionListSize());
-			if ((!Const.CHANGE.equals(this.UtilMap.getOption(ind))
-					&& !Const.SHUFFLE.equals(this.UtilMap.getOption(ind))
+			if ((!Numer0nOptionEnum.CHANGE.getOprionName().equals(this.UtilMap.getOption(ind))
+					&& !Numer0nOptionEnum.SHUFFLE.getOprionName().equals(this.UtilMap.getOption(ind))
 					&& (this.UtilMap.getOffenseListSize() == 0
 							|| !this.UtilMap.containOffenseOptionList(this.UtilMap.getOption(ind))))) {
 				this.UtilMap.addOffenseOptionList(this.UtilMap.getOption(ind));
@@ -152,13 +152,13 @@ public class Player extends Human {
 				break;
 			}
 		}
-		this.UtilMap.addOffenseOptionList(Const.NO_OPTION);
+		this.UtilMap.addOffenseOptionList(Numer0nOptionEnum.NOOPTION.getOprionName());
 
 		// 防御選択
 		while (true) {
 			int ind = new Random().nextInt(this.UtilMap.getOptionListSize());
-			if ((Const.CHANGE.equals(this.UtilMap.getOption(ind))
-					|| Const.SHUFFLE.equals(this.UtilMap.getOption(ind)))
+			if ((Numer0nOptionEnum.CHANGE.getOprionName().equals(this.UtilMap.getOption(ind))
+					|| Numer0nOptionEnum.SHUFFLE.getOprionName().equals(this.UtilMap.getOption(ind)))
 					&& (this.UtilMap.getDiffenseListSize() == 0
 							|| !this.UtilMap.containDiffenseOptionList(this.UtilMap.getOption(ind)))) {
 				this.UtilMap.addDiffenseOptionList(this.UtilMap.getOption(ind));
@@ -168,7 +168,7 @@ public class Player extends Human {
 				break;
 			}
 		}
-		this.UtilMap.addDiffenseOptionList(Const.NO_OPTION);
+		this.UtilMap.addDiffenseOptionList(Numer0nOptionEnum.NOOPTION.getOprionName());
 	}
 
 	/**

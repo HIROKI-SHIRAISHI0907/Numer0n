@@ -17,6 +17,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
+import application.component.consts.Numer0nDoubleEnum;
 import application.component.consts.Numer0nOptionEnum;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
@@ -169,7 +170,7 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
-		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
+		when(this.doubleOption.doubleLogic()).thenReturn(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd());
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.DOUBLE.getOprionName());
 		assertEquals(Numer0n_CONTINUE, value);
@@ -195,7 +196,7 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
-		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
+		when(this.doubleOption.doubleLogic()).thenReturn(Numer0nDoubleEnum.ALLEAT.getOprionCd());
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.DOUBLE.getOprionName());
 		assertEquals(Numer0n_GAMEOVER, value);
@@ -359,7 +360,7 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
-		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.TEACH_NUMBER);
+		when(this.doubleOption.doubleLogic()).thenReturn(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd());
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.DOUBLE.getOprionName());
 		assertEquals(Numer0n_CONTINUE, value);
@@ -385,7 +386,7 @@ public class CommonOptionUTTest {
 		gameMaster.setDifficulty(DifficultyConst.EASY);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// mock
-		when(this.doubleOption.doubleLogic()).thenReturn(DoubleOption.ALL_EAT);
+		when(this.doubleOption.doubleLogic()).thenReturn(Numer0nDoubleEnum.ALLEAT.getOprionCd());
 		// 検証
 		Integer value = this.testSuite.summarizeOption(Numer0nOptionEnum.DOUBLE.getOprionName());
 		assertEquals(Numer0n_GAMEOVER, value);

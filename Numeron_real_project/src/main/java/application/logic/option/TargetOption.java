@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
+import application.component.consts.PriorityFlagConst;
 import application.logic.human.GameMaster;
 import application.logic.option.map.TargetOptionMapUtil;
 import lombok.Getter;
@@ -89,12 +90,12 @@ public class TargetOption {
 			tarNumberList = this.gameMaster.getCorrectPlayerNumberList();
 			// 存在するかどうか判断するのに使用する数字
 			// 最優先フラグがあれば
-			if (!this.mapUtil.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+			if (!this.mapUtil.containValueSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 				exNum = Anything.convertIntegerToString(
 						new Random().nextInt(
 								TargetOptionMapUtil.TARGET_SELECT_NUMBER_PRIORITY_MAP.size()));
 			} else {
-				exNum = this.mapUtil.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
+				exNum = this.mapUtil.getSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 			}
 		} else {
 			tarNumberList = this.gameMaster.getCorrectCpuNumberList();

@@ -15,6 +15,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import application.component.consts.Numer0nDoubleEnum;
 import application.logic.human.GameMaster;
 import application.logic.judge.Eatbite;
 
@@ -65,7 +66,7 @@ public class EatbiteUTTest {
 		correctNumber.add("1");
 		correctNumber.add("2");
 		// 検証
-		assertEquals(Eatbite.ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("3EAT0BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -98,7 +99,7 @@ public class EatbiteUTTest {
 		correctNumber.add("4");
 		correctNumber.add("9");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("2EAT0BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -131,7 +132,7 @@ public class EatbiteUTTest {
 		correctNumber.add("4");
 		correctNumber.add("5");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("1EAT2BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -164,7 +165,7 @@ public class EatbiteUTTest {
 		correctNumber.add("4");
 		correctNumber.add("9");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("1EAT1BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -197,7 +198,7 @@ public class EatbiteUTTest {
 		correctNumber.add("0");
 		correctNumber.add("1");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("1EAT0BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -230,7 +231,7 @@ public class EatbiteUTTest {
 		correctNumber.add("1");
 		correctNumber.add("4");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("0EAT3BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -263,7 +264,7 @@ public class EatbiteUTTest {
 		correctNumber.add("5");
 		correctNumber.add("1");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("0EAT2BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -296,7 +297,7 @@ public class EatbiteUTTest {
 		correctNumber.add("3");
 		correctNumber.add("7");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("0EAT1BITE", this.testSuite.getEatBiteResult());
 	}
 
@@ -329,7 +330,7 @@ public class EatbiteUTTest {
 		correctNumber.add("8");
 		correctNumber.add("1");
 		// 検証
-		assertEquals(Eatbite.NONE_ALL_EAT, this.testSuite.judgeEatBite(callNumber, correctNumber));
+		assertEquals(Numer0nDoubleEnum.NONE_ALLEAT.getOprionCd(), this.testSuite.judgeEatBite(callNumber, correctNumber));
 		assertEquals("0EAT0BITE", this.testSuite.getEatBiteResult());
 	}
 

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nChangeEnum;
+import application.component.consts.Numer0nDoubleEnum;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.Numer0nTargetEnum;
 import application.logic.human.GameMaster;
@@ -75,18 +76,15 @@ public class CommonOptionImpl implements CommonOption {
 	 */
 	@Override
 	public int summarizeOption(String item) {
-		// メッセージ（item使用）
-		//		lp.setLogParam(Const.GAMEMASTER, 16,
-		//				new ArrayList<String>(Arrays.asList(Const.GAMEMASTER, item)));
 
 		String teachStr;
 		boolean gameOver = false;
-		int doubleResult = 0;
+		Integer doubleResult;
 		if (Numer0nOptionEnum.DOUBLE.getOprionName().equals(item)) {
 			// 2連続コール以内に当てられたか当てられなかったかを返却
 			doubleResult = this.doubleOption.doubleLogic();
 			// 当てられた場合ゲーム終了
-			if (doubleResult == DoubleOption.ALL_EAT) {
+			if (doubleResult == Numer0nDoubleEnum.ALLEAT.getOprionCd()) {
 				gameOver = true;
 			}
 		} else if (Numer0nOptionEnum.HIGHLOW.getOprionName().equals(item)) {

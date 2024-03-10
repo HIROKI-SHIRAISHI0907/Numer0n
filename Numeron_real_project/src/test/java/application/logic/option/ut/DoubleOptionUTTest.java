@@ -22,6 +22,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.Numer0nDoubleEnum;
 import application.component.consts.PriorityFlagConst;
 import application.component.message.MessageAccessor;
 import application.logic.human.Computer;
@@ -159,7 +160,8 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("1", this.testSuite.getDoubleNum());
 	}
@@ -199,7 +201,8 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(2, this.testSuite.getDoubleDigit());
 		assertEquals("5", this.testSuite.getDoubleNum());
 	}
@@ -241,9 +244,10 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// eatBiteがALL_EAT
-		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Eatbite.ALL_EAT);
+		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Numer0nDoubleEnum.ALLEAT.getOprionCd());
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertEquals(2, this.testSuite.getDoubleDigit());
 		assertEquals("5", this.testSuite.getDoubleNum());
 	}
@@ -326,7 +330,8 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("1", this.testSuite.getDoubleNum());
 	}
@@ -367,7 +372,8 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("3", this.testSuite.getDoubleNum());
 	}
@@ -408,9 +414,10 @@ public class DoubleOptionUTTest {
 		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// eatBiteがALL_EAT
-		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Eatbite.ALL_EAT);
+		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Numer0nDoubleEnum.ALLEAT.getOprionCd());
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("3", this.testSuite.getDoubleNum());
 	}

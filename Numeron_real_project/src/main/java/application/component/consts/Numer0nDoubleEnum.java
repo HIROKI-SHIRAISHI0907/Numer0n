@@ -9,8 +9,10 @@ public enum Numer0nDoubleEnum {
 
 	/** 0:EATが桁数と一致(全数字がわかった) */
 	ALLEAT(0, "EAT終了"),
-	/** 1:nEAT0BITEでない */
-	TEACH_NUMBER(1, "続行");
+	/** 1:nEAT0BITEでなく続ける */
+	TEACH_NUMBER(1, "続行"),
+	/** 2:ALLEAT以外 */
+	NONE_ALLEAT(2, "ALLEAT以外");
 
 	/** オプションコード */
 	private final Integer optionCd;

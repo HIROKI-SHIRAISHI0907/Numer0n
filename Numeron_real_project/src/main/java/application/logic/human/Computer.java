@@ -7,7 +7,9 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import application.component.anything.Anything;
-import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
+import application.component.consts.Numer0nOptionEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
 import lombok.Getter;
@@ -86,7 +88,7 @@ public class Computer extends Human {
 				int num = new Random().nextInt(10);
 				String numStr = Anything.convertIntegerToString(num);
 				// INSANE以外は数字が被るのは不可（数字のチェックを行う）
-				if (!Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+				if (!DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 					if (Objects.isNull(tmpList)
 							|| !tmpList.contains(numStr)) {
 						tmpList.add(numStr);
@@ -112,15 +114,15 @@ public class Computer extends Human {
 	public String useOffenseOption() {
 		String item;
 		// 最優先フラグがセットされているoptionを取得
-		if (this.UtilMap.containsValueOffenseOptionMap(Const.SAI_YUUSEN_FLAG)) {
+		if (this.UtilMap.containsValueOffenseOptionMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 			item = "NOOTPION";
 			//			item = Anything.getKey(GameComponentUtil.CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP,
-			//					Const.SAI_YUUSEN_FLAG);
+			//					PriorityFlagDifficultyConst.SAI_YUUSEN_FLAG);
 			// 任意のoptionを選択
 		} else {
 			Integer itemInt = new Random().nextInt(this.UtilMap.getOffenseMapSize());
 			item = this.UtilMap.getCpuOffense(itemInt);
-			if (!Const.NO_OPTION.equals(item)) {
+			if (!Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
 				this.UtilMap.removeOffenseOptionMap(item);
 			}
 		}
@@ -134,15 +136,15 @@ public class Computer extends Human {
 	public String useDiffenseOption() {
 		String item;
 		// 最優先フラグがセットされているoptionを取得
-		if (this.UtilMap.containsValueDiffenseOptionMap(Const.SAI_YUUSEN_FLAG)) {
+		if (this.UtilMap.containsValueDiffenseOptionMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 			item = "NOOTPION";
 			//			item = Anything.getKey(GameComponentUtil.CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP,
-			//					Const.SAI_YUUSEN_FLAG);
+			//					PriorityFlagDifficultyConst.SAI_YUUSEN_FLAG);
 			// 任意のoptionを選択
 		} else {
 			Integer itemInt = new Random().nextInt(this.UtilMap.getDiffenseMapSize());
 			item = this.UtilMap.getCpuDiffense(itemInt);
-			if (!Const.NO_OPTION.equals(item)) {
+			if (!Numer0nOptionEnum.NOOPTION.getOprionName().equals(item)) {
 				this.UtilMap.removeDiffenseOptionMap(item);
 			}
 		}
@@ -158,7 +160,7 @@ public class Computer extends Human {
 			int num = new Random().nextInt(10);
 			String numStr = Anything.convertIntegerToString(num);
 			// INSANE以外は数字が被ってはいけない
-			if (!Const.INSANE.equals(this.gameMaster.getDifficulty())) {
+			if (!DifficultyConst.INSANE.equals(this.gameMaster.getDifficulty())) {
 				if (Objects.isNull(tmpList)
 						|| !tmpList.contains(numStr)) {
 					tmpList.add(numStr);
@@ -182,8 +184,8 @@ public class Computer extends Human {
 		// 攻撃選択
 		while (true) {
 			int ind = new Random().nextInt(this.UtilMap.getOptionListSize());
-			if ((!Const.CHANGE.equals(this.UtilMap.getOption(ind))
-					&& !Const.SHUFFLE.equals(this.UtilMap.getOption(ind)))
+			if ((!Numer0nOptionEnum.CHANGE.getOprionName().equals(this.UtilMap.getOption(ind))
+					&& !Numer0nOptionEnum.SHUFFLE.getOprionName().equals(this.UtilMap.getOption(ind)))
 					&& (this.UtilMap.getOffenseMapSize() == 0
 							|| !this.UtilMap.containsKeyOffenseOptionMap(this.UtilMap.getOption(ind)))) {
 				this.UtilMap.addOffenseOptionMap(this.UtilMap.getOption(ind));
@@ -193,13 +195,13 @@ public class Computer extends Human {
 				break;
 			}
 		}
-		this.UtilMap.addOffenseOptionMap(Const.NO_OPTION);
+		this.UtilMap.addOffenseOptionMap(Numer0nOptionEnum.NOOPTION.getOprionName());
 
 		// 防御選択
 		while (true) {
 			int ind = new Random().nextInt(this.UtilMap.getOptionListSize());
-			if ((Const.CHANGE.equals(this.UtilMap.getOption(ind))
-					|| Const.SHUFFLE.equals(this.UtilMap.getOption(ind)))
+			if ((Numer0nOptionEnum.CHANGE.getOprionName().equals(this.UtilMap.getOption(ind))
+					|| Numer0nOptionEnum.SHUFFLE.equals(this.UtilMap.getOption(ind)))
 					&& (this.UtilMap.getDiffenseMapSize() == 0
 							|| !this.UtilMap.containsKeyDiffenseOptionMap(this.UtilMap.getOption(ind)))) {
 				this.UtilMap.addDiffenseOptionMap(this.UtilMap.getOption(ind));
@@ -209,7 +211,7 @@ public class Computer extends Human {
 				break;
 			}
 		}
-		this.UtilMap.addDiffenseOptionMap(Const.NO_OPTION);
+		this.UtilMap.addDiffenseOptionMap(Numer0nOptionEnum.NOOPTION.getOprionName());
 
 	}
 

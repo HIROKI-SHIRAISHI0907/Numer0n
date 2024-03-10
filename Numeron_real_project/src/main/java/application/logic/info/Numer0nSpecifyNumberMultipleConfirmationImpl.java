@@ -9,6 +9,7 @@ import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nNextActionFlagEnum;
 import application.component.consts.Numer0nOptionEnum;
+import application.component.consts.OtherMatchFlagConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -47,33 +48,6 @@ public class Numer0nSpecifyNumberMultipleConfirmationImpl implements Numer0nSpec
 	 */
 	private final Numer0nSpecifyNumber aiSpecifyNumber;
 
-	//	/**
-	//	 * 得られた情報に対して他の情報にもマッチするか確認するクラス
-	//	 * @param gameMaster ゲームマスタークラス
-	//	 * @param player プレーヤークラス
-	//	 * @param computer コンピュータクラス（CandidateCpuNumberList取得用）
-	//	 * @param info 情報クラス（今まで得られた情報取得用）
-	//	 */
-	//	public FulfillOtherInfo(GameMaster gameMaster, Player player, Computer computer, Info info) {
-	//		if (Const.CPU.equals(gameMaster.getName())) {
-	//			aiSpecifyNumber = new AiSpecifyNumber(gameMaster, null, computer, null);
-	//			// 候補でなかったものも対象
-	//			computer.getCandidateCpuNumberList().addAll(computer.getNotCandidateCpuNumberList());
-	//			for (String can: computer.getCandidateCpuNumberList()) {
-	//				this.candidateList.add(can);
-	//			}
-	//			this.everGetInfoList = info.getCpuInfoList();
-	//		} else {
-	//			aiSpecifyNumber = new AiSpecifyNumber(gameMaster, player, null, null);
-	//			// 候補でなかったものも対象
-	//			player.getCandidatePlayerNumberList().addAll(player.getNotCandidatePlayerNumberList());
-	//			for (String can: player.getCandidatePlayerNumberList()) {
-	//				this.candidateList.add(can);
-	//			}
-	//			this.everGetInfoList = info.getPlayerInfoList();
-	//		}
-	//	}
-
 	/**
 	 * {@inheritDoc}
 	 */
@@ -101,7 +75,7 @@ public class Numer0nSpecifyNumberMultipleConfirmationImpl implements Numer0nSpec
 									infoStr,
 									candNum,
 									Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd());
-						if (everNoneOpResult == Const.NOT_MATCH) {
+						if (everNoneOpResult == OtherMatchFlagConst.NOT_MATCH) {
 							exceptionFlag = true;
 						}
 						// その他のオプションの場合
@@ -111,7 +85,7 @@ public class Numer0nSpecifyNumberMultipleConfirmationImpl implements Numer0nSpec
 									infoStr,
 									candNum,
 									Numer0nNextActionFlagEnum.EVER_INFO_FLAG.getFlagCd());
-						if (everOpResult == Const.NOT_MATCH) {
+						if (everOpResult == OtherMatchFlagConst.NOT_MATCH) {
 							exceptionFlag = true;
 						}
 				}

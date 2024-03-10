@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import application.component.consts.Const;
+import application.component.consts.Numer0nOptionEnum;
 
 /**
  * Numer0nを開始する際に必要な部品
@@ -24,12 +24,12 @@ public class GameComponentUtil {
 	public static final List<String> OPTION_LIST;
 	static {
 		ArrayList<String> optionList = new ArrayList<String>();
-		optionList.add(Const.DOUBLE);
-		optionList.add(Const.SLASH);
-		optionList.add(Const.TARGET);
-		optionList.add(Const.HIGH_LOW);
-		optionList.add(Const.CHANGE);
-		optionList.add(Const.SHUFFLE);
+		optionList.add(Numer0nOptionEnum.DOUBLE.getOprionName());
+		optionList.add(Numer0nOptionEnum.SLASH.getOprionName());
+		optionList.add(Numer0nOptionEnum.TARGET.getOprionName());
+		optionList.add(Numer0nOptionEnum.HIGHLOW.getOprionName());
+		optionList.add(Numer0nOptionEnum.CHANGE.getOprionName());
+		optionList.add(Numer0nOptionEnum.SHUFFLE.getOprionName());
 
 		OPTION_LIST = Collections.unmodifiableList(optionList);
 	}

@@ -7,6 +7,7 @@ import java.util.Scanner;
 import org.springframework.stereotype.Component;
 
 import application.component.consts.Const;
+import application.component.consts.DifficultyConst;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -99,15 +100,15 @@ public class GameMaster {
 		String diff;
 		int diffs = new Random().nextInt(5);
 		if (diffs == 0) {
-			diff = Const.EASY;
+			diff = DifficultyConst.EASY;
 		} else if (diffs == 1) {
-			diff = Const.NORMAL;
+			diff = DifficultyConst.NORMAL;
 		} else if (diffs == 2) {
-			diff = Const.HARD;
+			diff = DifficultyConst.HARD;
 		} else if (diffs == 3) {
-			diff = Const.EXHAUSTED;
+			diff = DifficultyConst.EXHAUSTED;
 		} else {
-			diff = Const.INSANE;
+			diff = DifficultyConst.INSANE;
 		}
 		this.setDifficulty(diff);
 	}

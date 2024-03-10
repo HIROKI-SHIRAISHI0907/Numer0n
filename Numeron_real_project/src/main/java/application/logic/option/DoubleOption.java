@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nDigitEnum;
+import application.component.consts.Numer0nDoubleEnum;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.PriorityFlagConst;
 import application.logic.human.Computer;
@@ -39,16 +40,6 @@ public class DoubleOption {
 	 * クラス名
 	 */
 	private static final String CLASS_NAME = DoubleOption.class.getSimpleName();
-
-	/**
-	 * 3EAT（桁が増える場合ことを想定してALL_EATとする）の場合
-	 */
-	public static final int ALL_EAT = 0;
-
-	/**
-	 * 連続コールが外れた場合
-	 */
-	public static final int TEACH_NUMBER = 1;
 
 	/**
 	 * GameMaster
@@ -154,7 +145,7 @@ public class DoubleOption {
 			}
 
 			// EatBite判定
-			String eatBiteResult = this.eatBite.judgeEatBite(callNumberList, correctNumberList);
+			Integer eatBiteResult = this.eatBite.judgeEatBite(callNumberList, correctNumberList);
 
 			// CPUかplayerによって得られる情報を格納
 			if (Const.CPU.equals(this.getChkMember())) {
@@ -170,8 +161,8 @@ public class DoubleOption {
 			}
 
 			// 2回のコールのうちに正解したらbreak
-			if (Eatbite.ALL_EAT.equals(eatBiteResult)) {
-				return ALL_EAT;
+			if (eatBiteResult == Numer0nDoubleEnum.ALLEAT.getOprionCd()) {
+				return Numer0nDoubleEnum.ALLEAT.getOprionCd();
 			}
 
 			// 候補の数字から宣言した時、重複して宣言しないように、1度宣言した数字は候補リストから削除。
@@ -215,7 +206,7 @@ public class DoubleOption {
 			loop += 1;
 		} while (loop < 3);
 
-		return TEACH_NUMBER;
+		return Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd();
 	}
 
 	/**

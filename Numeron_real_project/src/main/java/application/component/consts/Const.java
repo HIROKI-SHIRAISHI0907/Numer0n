@@ -30,14 +30,7 @@ public class Const {
 	public static final String HIGH = "HIGH";
 	// 0~4の数字残留
 	public static final String LOW = "LOW";
-	// 一致残留
-	public static final String CONSISTENT = "0";
-	// 不一致残留
-	public static final String NOT_CONSISTENT = "1";
-	// 合致している残留
-	public static final int MATCH = 0;
-	// 合致していない残留
-	public static final int NOT_MATCH = 1;
+
 	// ハイフン残留
 	public static final String HYPHEN = "--";
 

@@ -17,6 +17,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
 import application.component.consts.Numer0nDigitEnum;
+import application.component.consts.Numer0nDoubleEnum;
 import application.component.consts.PriorityFlagConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
@@ -106,7 +107,8 @@ public class DoubleOption_realInfoMapUTTest {
 		Computer computer = spy(new Computer(gameMaster, info, util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(calllist, player.getCallNumber());
 		assertNotNull(this.testSuite.getDoubleDigit());
 		assertNotEquals("-1", this.testSuite.getDoubleNum());
@@ -179,7 +181,8 @@ public class DoubleOption_realInfoMapUTTest {
 		Computer computer = spy(new Computer(gameMaster, info, util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertNotNull(player.getCallNumber());
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("6", this.testSuite.getDoubleNum());
@@ -254,7 +257,8 @@ public class DoubleOption_realInfoMapUTTest {
 		Computer computer = spy(new Computer(gameMaster, info, util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertNotNull(player.getCallNumber());
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("6", this.testSuite.getDoubleNum());
@@ -329,7 +333,8 @@ public class DoubleOption_realInfoMapUTTest {
 		Computer computer = spy(new Computer(gameMaster, info, util));
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertNotNull(player.getCallNumber());
 		assertEquals(0, this.testSuite.getDoubleDigit());
 		assertEquals("6", this.testSuite.getDoubleNum());
@@ -400,7 +405,8 @@ public class DoubleOption_realInfoMapUTTest {
 		when(computer.getCallNumber()).thenReturn(calllist);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.TEACH_NUMBER.getOprionCd(), result);
 		assertEquals(calllist, computer.getCallNumber());
 		assertNotNull(this.testSuite.getDoubleDigit());
 		assertNotEquals("-1", this.testSuite.getDoubleNum());
@@ -477,7 +483,8 @@ public class DoubleOption_realInfoMapUTTest {
 		when(computer.getCallNumber()).thenReturn(calllist1).thenReturn(calllist2);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertNotNull(player.getCallNumber());
 		assertNotNull(this.testSuite.getDoubleDigit());
 		assertNotNull(this.testSuite.getDoubleNum());
@@ -553,7 +560,8 @@ public class DoubleOption_realInfoMapUTTest {
 		when(computer.getCallNumber()).thenReturn(calllist1).thenReturn(calllist2);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		assertEquals(DoubleOption.ALL_EAT, this.testSuite.doubleLogic());
+		Integer result = this.testSuite.doubleLogic();
+		assertEquals(Numer0nDoubleEnum.ALLEAT.getOprionCd(), result);
 		assertNotNull(player.getCallNumber());
 		assertNotNull(this.testSuite.getDoubleDigit());
 		assertNotNull(this.testSuite.getDoubleNum());
