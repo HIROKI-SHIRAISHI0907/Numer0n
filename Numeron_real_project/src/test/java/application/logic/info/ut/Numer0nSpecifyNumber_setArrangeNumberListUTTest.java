@@ -22,7 +22,7 @@ import application.logic.human.GameMaster;
 import application.logic.human.Player;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
-import application.logic.info.Numer0nSpecifyNumber;
+import application.logic.info.Numer0nSpecifyNumberImpl;
 
 /**
  * 得られた情報を元に整理する数字を格納するテストクラス
@@ -62,7 +62,7 @@ public class Numer0nSpecifyNumber_setArrangeNumberListUTTest {
 	private GameComponentUtil util;
 
 	@InjectMocks
-	private Numer0nSpecifyNumber testSuite;
+	private Numer0nSpecifyNumberImpl testSuite;
 
 	/**
 	 * <p>
@@ -88,7 +88,7 @@ public class Numer0nSpecifyNumber_setArrangeNumberListUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		Method method = Numer0nSpecifyNumber.class.getDeclaredMethod(
+		Method method = Numer0nSpecifyNumberImpl.class.getDeclaredMethod(
 				"setArrangeNumberList");
 		method.setAccessible(true);
 		ArrayList<String> resultList = (ArrayList<String>) method
@@ -119,7 +119,7 @@ public class Numer0nSpecifyNumber_setArrangeNumberListUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		Method method = Numer0nSpecifyNumber.class.getDeclaredMethod(
+		Method method = Numer0nSpecifyNumberImpl.class.getDeclaredMethod(
 				"setArrangeNumberList");
 		method.setAccessible(true);
 		ArrayList<String> resultList = (ArrayList<String>) method
@@ -151,7 +151,7 @@ public class Numer0nSpecifyNumber_setArrangeNumberListUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		// 検証
-		Method method = Numer0nSpecifyNumber.class.getDeclaredMethod(
+		Method method = Numer0nSpecifyNumberImpl.class.getDeclaredMethod(
 				"setArrangeNumberList");
 		method.setAccessible(true);
 		ArrayList<String> resultList = (ArrayList<String>) method
@@ -184,7 +184,7 @@ public class Numer0nSpecifyNumber_setArrangeNumberListUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "player", player);
 		ReflectionTestUtils.setField(this.testSuite, "computer", computer);
 		// 検証
-		Method method = Numer0nSpecifyNumber.class.getDeclaredMethod(
+		Method method = Numer0nSpecifyNumberImpl.class.getDeclaredMethod(
 				"setArrangeNumberList");
 		method.setAccessible(true);
 		ArrayList<String> resultList = (ArrayList<String>) method

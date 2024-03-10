@@ -20,7 +20,7 @@ import application.logic.human.GameMaster;
 import application.logic.human.Player;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
-import application.logic.info.Numer0nSpecifyNumber;
+import application.logic.info.Numer0nSpecifyNumberImpl;
 
 /**
  * 得られた情報を元に整理する数字を格納するテストクラス<br>
@@ -52,7 +52,7 @@ public class Numer0nSpecifyNumber_arrangeCandidateNumberLogic_highLowUTTest exte
 	private GameComponentUtil util;
 
 	@InjectMocks
-	private Numer0nSpecifyNumber testSuite;
+	private Numer0nSpecifyNumberImpl testSuite;
 
 	/**
 	 * <p>

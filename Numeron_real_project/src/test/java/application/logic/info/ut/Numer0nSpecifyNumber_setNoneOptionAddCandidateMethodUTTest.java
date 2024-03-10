@@ -20,7 +20,7 @@ import application.logic.human.GameMaster;
 import application.logic.human.Player;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
-import application.logic.info.Numer0nSpecifyNumber;
+import application.logic.info.Numer0nSpecifyNumberImpl;
 
 /**
  * 得られたEatBite情報を元に候補の数値リストを登録する用のメソッド（オプションなし）テストクラス
@@ -41,11 +41,6 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 	private static final Integer Numer0n_CONTINUE = 0;
 
 	/**
-	 * Numer0n終了
-	 */
-	private static final Integer Numer0n_GAMEOVER = 1;
-
-	/**
 	 * Numer0nInfo
 	 */
 	@Mock
@@ -58,7 +53,7 @@ public class Numer0nSpecifyNumber_setNoneOptionAddCandidateMethodUTTest {
 	private GameComponentUtil util;
 
 	@InjectMocks
-	private Numer0nSpecifyNumber testSuite;
+	private Numer0nSpecifyNumberImpl testSuite;
 
 	/**
 	 * <p>

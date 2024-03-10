@@ -21,7 +21,7 @@ import application.logic.human.GameMaster;
 import application.logic.human.Player;
 import application.logic.human.gameComponent.GameComponentUtil;
 import application.logic.info.Numer0nInfo;
-import application.logic.info.Numer0nSpecifyNumber;
+import application.logic.info.Numer0nSpecifyNumberImpl;
 
 /**
  * 得られたEatBite情報を元に候補の数値リストを登録する用のメソッド（オプションなし）テストクラス
@@ -49,7 +49,7 @@ public class Numer0nSpecifyNumber_setOptionAddCandidateMethodUTTest {
 	private GameComponentUtil util;
 
 	@InjectMocks
-	private Numer0nSpecifyNumber testSuite;
+	private Numer0nSpecifyNumberImpl testSuite;
 
 	/**
 	 * <p>
