@@ -12,8 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
-import application.component.consts.Const;
 import application.component.consts.Numer0nDigitEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.option.map.DoubleOptionMapUtil;
 
 /**
@@ -53,11 +53,11 @@ public class DoubleOptionMapUtilUTTest {
 	@Test
 	final void DoubleOptionMapUtil01Test() throws Exception {
 		// テスト
-		this.testSuite.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
-		Integer value = this.testSuite.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		Integer value = this.testSuite.getDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertEquals(Numer0nDigitEnum.ZEROD.getDigit(), value);
 
-		assertTrue(this.testSuite.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertTrue(this.testSuite.containValueDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 	/**
@@ -75,11 +75,11 @@ public class DoubleOptionMapUtilUTTest {
 	@Test
 	final void DoubleOptionMapUtil02Test() throws Exception {
 		// テスト
-		this.testSuite.addDigitPriorityMap(-1, Const.SAI_YUUSEN_FLAG);
-		Integer value = this.testSuite.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDigitPriorityMap(-1, PriorityFlagConst.SAI_YUUSEN_FLAG);
+		Integer value = this.testSuite.getDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertNull(value);
 
-		assertFalse(this.testSuite.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertFalse(this.testSuite.containValueDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 }

@@ -9,6 +9,7 @@ import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nOptionEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
@@ -104,9 +105,9 @@ public class DoubleOption {
 
 		// 現在勝負している桁数に応じて初期化（YUUSEN_MINUS→対象外の桁）
 		if (this.gameMaster.getDigit() < 5) {
-			this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.FOURD.getDigit(), Const.YUUSEN_MINUS);
+			this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.FOURD.getDigit(), PriorityFlagConst.YUUSEN_MINUS);
 			if (this.gameMaster.getDigit() == 3) {
-				this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.THREED.getDigit(), Const.YUUSEN_MINUS);
+				this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.THREED.getDigit(), PriorityFlagConst.YUUSEN_MINUS);
 			}
 		}
 
@@ -123,11 +124,11 @@ public class DoubleOption {
 			doubleNum = this.gameMaster.getCorrectCpuNumberList().get(this.doubleDigit);
 		} else {
 			// 教える桁（最優先フラグが含まれているか）
-			if (!this.mapUtil.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+			if (!this.mapUtil.containValueDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 				doubleDigit = new Random().nextInt(
 						this.gameMaster.getDigit());
 			} else {
-				doubleDigit = this.mapUtil.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
+				doubleDigit = this.mapUtil.getDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 			}
 			// 教える数字
 			doubleNum = this.gameMaster.getCorrectPlayerNumberList().get(doubleDigit);

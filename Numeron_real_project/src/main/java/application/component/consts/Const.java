@@ -41,17 +41,6 @@ public class Const {
 	// ハイフン残留
 	public static final String HYPHEN = "--";
 
-	// 対象外の桁やフラグ残留
-	public static final int YUUSEN_MINUS = -1;
-	// 最優先残留
-	public static final int SAI_YUUSEN_FLAG = 1;
-	// 以下優先度2以下残留
-	public static final int YUUSEN_FLAG_2 = 2;
-	public static final int YUUSEN_FLAG_3 = 3;
-	public static final int YUUSEN_FLAG_4 = 4;
-	public static final int YUUSEN_FLAG_5 = 5;
-	public static final int YUUSEN_FLAG_6 = 6;
-
 	// EATの文字残留
 	public static final int EAT_START_STRING = 0;
 	// BITEの文字残留

@@ -22,6 +22,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.anything.Anything;
 import application.component.consts.Const;
+import application.component.consts.PriorityFlagConst;
 import application.component.message.MessageAccessor;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
@@ -154,8 +155,8 @@ public class DoubleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
@@ -194,8 +195,8 @@ public class DoubleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
@@ -236,8 +237,8 @@ public class DoubleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// eatBiteがALL_EAT
 		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Eatbite.ALL_EAT);
@@ -281,7 +282,7 @@ public class DoubleOptionUTTest {
 //		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 //		// 最優先フラグを設定
 //		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-//		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
+//		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
 //		// 検証
 //		this.testSuite.doubleLogic();
 //		assertNotNull(this.testSuite.getDoubleDigit());
@@ -321,8 +322,8 @@ public class DoubleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
@@ -362,8 +363,8 @@ public class DoubleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		assertEquals(DoubleOption.TEACH_NUMBER, this.testSuite.doubleLogic());
@@ -403,8 +404,8 @@ public class DoubleOptionUTTest {
 		list.add("7");
 		gameMaster.setCorrectCpuNumberList(list);
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// eatBiteがALL_EAT
 		when(this.eatBite.judgeEatBite(any(), any())).thenReturn(Eatbite.ALL_EAT);

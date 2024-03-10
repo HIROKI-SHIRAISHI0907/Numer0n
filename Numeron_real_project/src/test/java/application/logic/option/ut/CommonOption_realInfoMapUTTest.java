@@ -22,6 +22,7 @@ import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
 import application.component.consts.Numer0nShuffleEnum;
+import application.component.consts.PriorityFlagConst;
 import application.component.error.CreateErrorExceptionComponentImpl;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
@@ -114,7 +115,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		DoubleOptionMapUtil mapUtil = spy(new DoubleOptionMapUtil());
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -345,7 +346,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		TargetOptionMapUtil mapUtil = spy(new TargetOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -399,9 +400,9 @@ public class CommonOption_realInfoMapUTTest {
 		mapUtil.clearDoPriorityMap();
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -453,7 +454,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
-		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -506,7 +507,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		DoubleOptionMapUtil mapUtil = spy(new DoubleOptionMapUtil());
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ONED.getDigit(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -735,7 +736,7 @@ public class CommonOption_realInfoMapUTTest {
 		// MapUtil
 		TargetOptionMapUtil mapUtil = spy(new TargetOptionMapUtil());
 		mapUtil.clearSelectNumberPriorityMap();
-		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);
@@ -789,9 +790,9 @@ public class CommonOption_realInfoMapUTTest {
 		mapUtil.clearDoPriorityMap();
 		mapUtil.clearSelectNumberPriorityMap();
 		mapUtil.clearDigitPriorityMap();
-		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), Const.SAI_YUUSEN_FLAG);
-		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nChangeEnum.CHANGE_GO.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		mapUtil.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.NINE.getNum(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		mapUtil.addDigitPriorityMap(Numer0nDigitEnum.ZEROD.getDigit(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		// 情報
 		Numer0nInfo info = spy(new Numer0nInfo());
 		ReflectionTestUtils.setField(this.testSuite, "info", info);

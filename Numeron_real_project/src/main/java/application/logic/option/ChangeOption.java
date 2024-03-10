@@ -11,6 +11,7 @@ import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nChangeEnum;
 import application.component.consts.Numer0nDigitEnum;
 import application.component.consts.Numer0nSelectNumberEnum;
+import application.component.consts.PriorityFlagConst;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
 import application.logic.human.GameMaster;
@@ -122,9 +123,9 @@ public class ChangeOption {
 				if (changeFlag) {
 					// 現在勝負している桁数に応じて初期化（YUUSEN_MINUS→対象外の桁）
 					if (this.gameMaster.getDigit() < 5) {
-						this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.FOURD.getDigit(), Const.YUUSEN_MINUS);
+						this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.FOURD.getDigit(), PriorityFlagConst.YUUSEN_MINUS);
 						if (this.gameMaster.getDigit() == 3) {
-							this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.THREED.getDigit(), Const.YUUSEN_MINUS);
+							this.mapUtil.addDigitPriorityMap(Numer0nDigitEnum.THREED.getDigit(), PriorityFlagConst.YUUSEN_MINUS);
 						}
 					}
 
@@ -136,21 +137,21 @@ public class ChangeOption {
 						boolean notSameTf = false;
 
 						// 交換する数値選択（優先度未決定時）
-						if (!this.mapUtil.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+						if (!this.mapUtil.containValueSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 							exNum = Anything.convertIntegerToString(
 									new Random().nextInt(
 											ChangeOptionMapUtil.CHANGE_SELECT_NUMBER_PRIORITY_MAP.size()));
 							// 最優先フラグがついている数字を選択
 						} else {
-							exNum = this.mapUtil.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
+							exNum = this.mapUtil.getSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 						}
 
 						// 交換する桁選択（優先度未決定時）
-						if (!this.mapUtil.containValueDigitPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+						if (!this.mapUtil.containValueDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 							digitInd = new Random().nextInt(this.gameMaster.getDigit());
 							// 最優先フラグがついている桁を選択
 						} else {
-							digitInd = this.mapUtil.getDigitPriorityMap(Const.SAI_YUUSEN_FLAG);
+							digitInd = this.mapUtil.getDigitPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 						}
 
 						// 難易度に応じて数値チェック
@@ -246,12 +247,12 @@ public class ChangeOption {
 	private boolean getDoChangeFlag() {
 		String ind;
 		// 最優先フラグが設定されていなければ
-		if (!this.mapUtil.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+		if (!this.mapUtil.containValueDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 			ind = Anything.convertIntegerToString(new Random().nextInt(
 					ChangeOptionMapUtil.CHANGE_DO_PRIORITY_MAP.size()) + 1);
 			// ランダム選択
 		} else {
-			ind = this.mapUtil.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
+			ind = this.mapUtil.getDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		}
 
 		return (Numer0nChangeEnum.CHANGE_GO.getOprionCd().equals(ind))

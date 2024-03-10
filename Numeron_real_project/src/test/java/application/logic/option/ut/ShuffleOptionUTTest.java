@@ -20,6 +20,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
+import application.component.consts.PriorityFlagConst;
 import application.logic.human.GameMaster;
 import application.logic.option.ShuffleOption;
 import application.logic.option.map.ShuffleOptionMapUtil;
@@ -177,8 +178,8 @@ public class ShuffleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
 		// 検証
 		this.testSuite.shuffleLogic();
@@ -215,8 +216,8 @@ public class ShuffleOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
 		// 検証
 		this.testSuite.shuffleLogic();

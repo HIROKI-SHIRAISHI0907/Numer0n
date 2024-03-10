@@ -26,6 +26,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nSelectNumberEnum;
+import application.component.consts.PriorityFlagConst;
 import application.component.message.MessageAccessor;
 import application.logic.human.GameMaster;
 import application.logic.option.ChangeOption;
@@ -157,12 +158,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -209,12 +210,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -265,12 +266,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -321,12 +322,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -377,12 +378,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -427,9 +428,9 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("LOW,LOW,HIGH", convertListToString(highLow(this.testSuite.getChangedNumberList())));
@@ -474,12 +475,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -526,12 +527,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -582,12 +583,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -638,12 +639,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -694,12 +695,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -744,9 +745,9 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("LOW,LOW,HIGH", convertListToString(highLow(this.testSuite.getChangedNumberList())));
@@ -791,12 +792,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -843,12 +844,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -899,12 +900,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -955,12 +956,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4").thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(1).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1011,12 +1012,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("8").thenReturn("2");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1061,9 +1062,9 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
 		// 検証
 		this.testSuite.changeLogic();
 		assertEquals("LOW,LOW,HIGH", convertListToString(highLow(this.testSuite.getChangedNumberList())));
@@ -1107,12 +1108,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("9");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1157,12 +1158,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1207,12 +1208,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1257,12 +1258,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("9");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1311,12 +1312,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("3").thenReturn("7");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1363,14 +1364,14 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("8");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0);
-		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
@@ -1415,8 +1416,8 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
 		// 検証
 		this.testSuite.changeLogic();
@@ -1463,14 +1464,14 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("2");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(2);
-		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
@@ -1517,14 +1518,14 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(1);
-		when(this.mapUtil.getDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1");
 		// 検証
 		this.testSuite.changeLogic();
@@ -1579,12 +1580,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("1").thenReturn("6").thenReturn("7").thenReturn("1").thenReturn("9");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(0).thenReturn(3).thenReturn(1).thenReturn(2);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1635,12 +1636,12 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.containValueDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.containValueDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("8");
-		when(this.mapUtil.getDigitPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.getDigitPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn(3);
 		// 検証
 		this.testSuite.changeLogic();
@@ -1686,7 +1687,7 @@ public class ChangeOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueDoPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(false);
+		when(this.mapUtil.containValueDoPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(false);
 		// 検証
 		this.testSuite.changeLogic();
 		assertNotNull(this.testSuite.getExNum());

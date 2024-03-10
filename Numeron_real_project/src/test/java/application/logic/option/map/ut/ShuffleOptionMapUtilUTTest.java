@@ -12,8 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
-import application.component.consts.Const;
 import application.component.consts.Numer0nShuffleEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.option.map.ShuffleOptionMapUtil;
 
 /**
@@ -53,11 +53,11 @@ public class ShuffleOptionMapUtilUTTest {
 	@Test
 	final void ShuffleOptionMapUtil01Test() throws Exception {
 		// テスト
-		this.testSuite.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
-		String value = this.testSuite.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertEquals(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), value);
 
-		assertTrue(this.testSuite.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertTrue(this.testSuite.containValueDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 	/**
@@ -75,11 +75,11 @@ public class ShuffleOptionMapUtilUTTest {
 	@Test
 	final void ShuffleOptionMapUtil02Test() throws Exception {
 		// テスト
-		this.testSuite.addDoPriorityMap("-1", Const.SAI_YUUSEN_FLAG);
-		String value = this.testSuite.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addDoPriorityMap("-1", PriorityFlagConst.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertNull(value);
 
-		assertFalse(this.testSuite.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertFalse(this.testSuite.containValueDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 }

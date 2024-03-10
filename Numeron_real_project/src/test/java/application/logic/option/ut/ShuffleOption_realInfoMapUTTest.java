@@ -17,6 +17,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nShuffleEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.human.GameMaster;
 import application.logic.option.ShuffleOption;
 import application.logic.option.map.ShuffleOptionMapUtil;
@@ -204,7 +205,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
-		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_REJECT.getOprionCd(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_REJECT.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();
@@ -241,7 +242,7 @@ public class ShuffleOption_realInfoMapUTTest {
 		// MapUtil
 		ShuffleOptionMapUtil mapUtil = spy(new ShuffleOptionMapUtil());
 		mapUtil.clearDoPriorityMap();
-		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), Const.SAI_YUUSEN_FLAG);
+		mapUtil.addDoPriorityMap(Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd(), PriorityFlagConst.SAI_YUUSEN_FLAG);
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", mapUtil);
 		// シャッフル対象数字設定
 		ArrayList<String> list = new ArrayList<>();

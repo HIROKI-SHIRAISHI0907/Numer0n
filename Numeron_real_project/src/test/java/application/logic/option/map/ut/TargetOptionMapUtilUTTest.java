@@ -12,8 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
-import application.component.consts.Const;
 import application.component.consts.Numer0nSelectNumberEnum;
+import application.component.consts.PriorityFlagConst;
 import application.logic.option.map.TargetOptionMapUtil;
 
 /**
@@ -53,11 +53,11 @@ public class TargetOptionMapUtilUTTest {
 	@Test
 	final void TargetOptionMapUtil01Test() throws Exception {
 		// テスト
-		this.testSuite.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.ZERO.getNum(), Const.SAI_YUUSEN_FLAG);
-		String value = this.testSuite.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addSelectNumberPriorityMap(Numer0nSelectNumberEnum.ZERO.getNum(), PriorityFlagConst.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertEquals(Numer0nSelectNumberEnum.ZERO.getNum(), value);
 
-		assertTrue(this.testSuite.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertTrue(this.testSuite.containValueSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 	/**
@@ -75,11 +75,11 @@ public class TargetOptionMapUtilUTTest {
 	@Test
 	final void targetOptionMapUtil02Test() throws Exception {
 		// テスト
-		this.testSuite.addSelectNumberPriorityMap("-1", Const.SAI_YUUSEN_FLAG);
-		String value = this.testSuite.getSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG);
+		this.testSuite.addSelectNumberPriorityMap("-1", PriorityFlagConst.SAI_YUUSEN_FLAG);
+		String value = this.testSuite.getSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		assertNull(value);
 
-		assertFalse(this.testSuite.containValueSelectNumberPriorityMap(Const.SAI_YUUSEN_FLAG));
+		assertFalse(this.testSuite.containValueSelectNumberPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG));
 	}
 
 }

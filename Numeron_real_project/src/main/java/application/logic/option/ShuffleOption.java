@@ -11,6 +11,7 @@ import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nShuffleEnum;
+import application.component.consts.PriorityFlagConst;
 import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nUncontinuableException;
 import application.logic.human.GameMaster;
@@ -124,11 +125,11 @@ public class ShuffleOption {
 	private boolean getDoShuffleFlag() {
 		// シャッフルする優先フラグ何も立っていない場合、ランダムでシャッフルするか選ぶ
 		String ind;
-		if (!this.mapUtil.containValueDoPriorityMap(Const.SAI_YUUSEN_FLAG)) {
+		if (!this.mapUtil.containValueDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG)) {
 			ind = Anything.convertIntegerToString(new Random().nextInt(
 					ShuffleOptionMapUtil.SHUFFLE_DO_PRIORITY_MAP.size()) + 1);
 		} else {
-			ind = this.mapUtil.getDoPriorityMap(Const.SAI_YUUSEN_FLAG);
+			ind = this.mapUtil.getDoPriorityMap(PriorityFlagConst.SAI_YUUSEN_FLAG);
 		}
 
 		return (Numer0nShuffleEnum.SHUFFLE_GO.getOprionCd().equals(ind))

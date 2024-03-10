@@ -23,6 +23,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import application.component.anything.Anything;
 import application.component.consts.Const;
 import application.component.consts.DifficultyConst;
+import application.component.consts.PriorityFlagConst;
 import application.component.message.MessageAccessor;
 import application.logic.human.GameMaster;
 import application.logic.option.TargetOption;
@@ -342,8 +343,8 @@ public class TargetOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4");
 		// 検証
 		assertEquals("EXISTLISTOFNUMBER", this.testSuite.targetLogic());
@@ -385,8 +386,8 @@ public class TargetOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("0");
 		// 検証
 		assertEquals("EXISTLISTOFNUMBER", this.testSuite.targetLogic());
@@ -429,8 +430,8 @@ public class TargetOptionUTTest {
 		ReflectionTestUtils.setField(this.testSuite, "gameMaster", gameMaster);
 		// 最優先フラグを設定
 		ReflectionTestUtils.setField(this.testSuite, "mapUtil", this.mapUtil);
-		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG))).thenReturn(true);
-		when(this.mapUtil.getSelectNumberPriorityMap(eq(Const.SAI_YUUSEN_FLAG)))
+		when(this.mapUtil.containValueSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG))).thenReturn(true);
+		when(this.mapUtil.getSelectNumberPriorityMap(eq(PriorityFlagConst.SAI_YUUSEN_FLAG)))
 				.thenReturn("4");
 		// 検証
 		assertEquals("EXISTLISTOFNUMBER", this.testSuite.targetLogic());
