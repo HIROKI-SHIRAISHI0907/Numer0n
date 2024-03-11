@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import application.component.consts.DifficultyConst;
 import application.component.error.Numer0nUncontinuableException;
-import application.logic.db.logic.DbAccessor;
 import application.logic.human.GameMaster;
 import lombok.RequiredArgsConstructor;
 
@@ -48,11 +47,6 @@ public class Numer0nNextActionImpl implements Numer0nNextAction {
 	private final Numer0nNextActionSetFlagOnMap flagMap;
 
 	/**
-	 * DbAccessor
-	 */
-	private final DbAccessor dbAccessor;
-
-	/**
 	 * {@inheritDoc}
 	 */
 	@Override
@@ -69,12 +63,10 @@ public class Numer0nNextActionImpl implements Numer0nNextAction {
 					break;
 				case DifficultyConst.EXHAUSTED:
 					this.specifyNumberMultiple.arrangeCandidateNumberMultipleConfirmationLogic();
-					this.dbAccessor.numer0nInsert(null, null);
 					this.flagMap.setFlagLogic();
 					break;
 				case DifficultyConst.INSANE:
 					this.specifyNumberMultiple.arrangeCandidateNumberMultipleConfirmationLogic();
-					this.dbAccessor.numer0nInsert(null, null);
 					// AI入れる
 					this.flagMap.setFlagLogic();
 					break;
