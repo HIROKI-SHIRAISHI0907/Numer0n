@@ -21,12 +21,12 @@ import lombok.RequiredArgsConstructor;
  * [基本前提条件]<br>
  * 当クラスはHARD以上のレベルのみ使用する
  * <p>
- * オプションを使用するようにした場合、以下の優先順位をつける。
- * 1,SLASH
- * 2,HIGHLOW
- * 3,TARGET
- * 4,SHUFFLE（数字が当てられそうになった場合の使用1。）
- * 5,CHANGE（数字が当てられそうになった場合の使用2。SHUFFLEに比べて数字そのものを変えられるため、SHUFFLEよりも使用優先度は低い）
+ * オプションを使用するようにした場合、以下の優先順位をつける。<br>
+ * 1,SLASH<br>
+ * 2,HIGHLOW<br>
+ * 3,TARGET<br>
+ * 4,SHUFFLE（数字が当てられそうになった場合の使用1。）<br>
+ * 5,CHANGE（数字が当てられそうになった場合の使用2。SHUFFLEに比べて数字そのものを変えられるため、SHUFFLEよりも使用優先度は低い）<br>
  * 6,DOUBLE（ある程度の相手の数字が絞られた場合の最終手段として使用。）
  * </p>
  * @author shiraishitoshio
