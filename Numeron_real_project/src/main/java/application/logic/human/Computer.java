@@ -10,7 +10,7 @@ import application.component.anything.Anything;
 import application.component.consts.DifficultyConst;
 import application.component.consts.Numer0nOptionEnum;
 import application.component.consts.PriorityFlagConst;
-import application.logic.human.gameComponent.GameComponentUtil;
+import application.logic.human.gameComponent.GameComponentMapUtil;
 import application.logic.info.Numer0nInfo;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -30,9 +30,9 @@ public class Computer extends Human {
 	private final Numer0nInfo info;
 
 	/**
-	 * GameComponentUtil
+	 * GameComponentMapUtil
 	 */
-	private final GameComponentUtil UtilMap;
+	private final GameComponentMapUtil UtilMap;
 
 	/**
 	 * 候補となる数字のリスト

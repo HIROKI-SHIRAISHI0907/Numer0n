@@ -16,7 +16,7 @@ import application.component.consts.Numer0nOptionEnum;
  *
  */
 @Component
-public class GameComponentUtil {
+public class GameComponentMapUtil {
 
 	/**
 	 * オプションリスト
@@ -92,7 +92,7 @@ public class GameComponentUtil {
 	 */
 	public String getCpuOffense(Integer index) {
 		ArrayList<String> list = new ArrayList<String>();
-		for (Map.Entry<String, Integer> entry: CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP.entrySet()) {
+		for (Map.Entry<String, Integer> entry : CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP.entrySet()) {
 			list.add(entry.getKey());
 		}
 		return list.get(index);
@@ -104,7 +104,7 @@ public class GameComponentUtil {
 	 */
 	public String getCpuDiffense(Integer index) {
 		ArrayList<String> list = new ArrayList<String>();
-		for (Map.Entry<String, Integer> entry: CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.entrySet()) {
+		for (Map.Entry<String, Integer> entry : CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.entrySet()) {
 			list.add(entry.getKey());
 		}
 		return list.get(index);
@@ -289,6 +289,28 @@ public class GameComponentUtil {
 	}
 
 	/**
+	 * 登録した攻撃オプション用のMap(CPU)のvalueを更新する
+	 * @param optionName オプション名
+	 * @param value 更新したい優先度フラグ
+	 */
+	public void alterOffenseOptionMap(String optionName, Integer value) {
+		if (containsKeyOffenseOptionMap(optionName)) {
+			CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP.put(optionName, value);
+		}
+	}
+
+	/**
+	 * 登録した防御オプション用のMap(CPU)にvalueを更新する
+	 * @param optionName オプション名
+	 * @param value 更新したい優先度フラグ
+	 */
+	public void alterDiffenseOptionMap(String optionName, Integer value) {
+		if (containsKeyDiffenseOptionMap(optionName)) {
+			CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.put(optionName, value);
+		}
+	}
+
+	/**
 	 * 選択した攻撃オプション用のMap(CPU)からオプションを削除する
 	 * @param optionName オプション名
 	 */
@@ -305,6 +327,28 @@ public class GameComponentUtil {
 	public void removeDiffenseOptionMap(String optionName) {
 		if (containsKeyDiffenseOptionMap(optionName)) {
 			CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.remove(optionName);
+		}
+	}
+
+	/**
+	 * <p>
+	 * 選択した攻撃オプション用のMap(CPU)をクリアする
+	 * </p>
+	 */
+	public void clearOffenseOptionMap() {
+		for (String key : CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP.keySet()) {
+			CPU_SELECT_OFFENSE_OPTION_PRIORITY_MAP.put(key, null);
+		}
+	}
+
+	/**
+	 * <p>
+	 * 選択した攻撃オプション用のMap(CPU)をクリアする
+	 * </p>
+	 */
+	public void clearDiffenseOptionMap() {
+		for (String key : CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.keySet()) {
+			CPU_SELECT_DIFFENSE_OPTION_PRIORITY_MAP.put(key, null);
 		}
 	}
 
