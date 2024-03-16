@@ -7,12 +7,9 @@
 	<insert id="numeron_result_insert" parameterType="application.logic.db.dto.Numer0nResultInsertInputDTO">
 
 		INSERT INTO numeron_result (
-			id,
-			name,
-			digit,
-			difficulty,
-			last_play_time,
-			valid_flg,
+			gameid,
+			userid,
+			get_info_num,
 			register_name,
 			register_time,
 			update_name,
