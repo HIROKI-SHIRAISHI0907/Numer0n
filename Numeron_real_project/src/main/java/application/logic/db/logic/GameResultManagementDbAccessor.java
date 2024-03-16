@@ -12,17 +12,17 @@ import application.logic.db.dto.AbstractInputDTO;
  * @author shiraishitoshio
  *
  */
-public interface DbAccessor {
+public interface GameResultManagementDbAccessor {
 
 	/**
 	 * Numer0nで得た結果をDBに登録する
 	 */
-	public Integer numer0nInsert(String dbAccessId, AbstractInputDTO dto);
+	public Integer insertResultData(String dbAccessId, AbstractInputDTO dto);
 
 	/**
 	 * Numer0nで得た結果をDBから取得する
 	 * @return 処理結果リスト
 	 */
-	public <E> List<E> numer0nSelectForObject(String dbAccessId, AbstractInputDTO dto);
+	public <E> List<E> getResultData(String dbAccessId, AbstractInputDTO dto);
 
 }

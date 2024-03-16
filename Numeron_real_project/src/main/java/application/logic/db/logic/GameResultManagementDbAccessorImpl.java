@@ -6,7 +6,7 @@ import application.component.error.CreateErrorExceptionComponent;
 import application.component.error.Numer0nException;
 import application.logic.db.common.CommonDAO;
 import application.logic.db.dto.AbstractInputDTO;
-import application.logic.db.dto.Numer0nSelectOutputDTO;
+import application.logic.db.dto.Numer0nResultSelectOutputDTO;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
  *
  */
 @RequiredArgsConstructor
-public class DbAccessorImpl implements DbAccessor {
+public class GameResultManagementDbAccessorImpl implements GameResultManagementDbAccessor {
 
 	/**
 	 * 小機能ID
@@ -28,7 +28,7 @@ public class DbAccessorImpl implements DbAccessor {
 	/**
 	 * クラス名
 	 */
-	private static final String CLASS_NAME = DbAccessorImpl.class.getSimpleName();
+	private static final String CLASS_NAME = GameResultManagementDbAccessorImpl.class.getSimpleName();
 
 	/**
 	 * CommonDAO
@@ -44,7 +44,7 @@ public class DbAccessorImpl implements DbAccessor {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Integer numer0nInsert(String dbAccessId, AbstractInputDTO dto) {
+	public Integer insertResultData(String dbAccessId, AbstractInputDTO dto) {
 		final String METHOD_NAME = "numer0nInsert";
 
 		int cnt;
@@ -63,10 +63,10 @@ public class DbAccessorImpl implements DbAccessor {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Numer0nSelectOutputDTO> numer0nSelectForObject(String dbAccessId, AbstractInputDTO dto) {
+	public List<Numer0nResultSelectOutputDTO> getResultData(String dbAccessId, AbstractInputDTO dto) {
 		final String METHOD_NAME = "numer0nSelectForObject";
 
-		List<Numer0nSelectOutputDTO> resultList = null;
+		List<Numer0nResultSelectOutputDTO> resultList = null;
 		try {
 			resultList = this.commonDAO.selectForObjectList(dbAccessId, dto);
 		} catch (Numer0nException e) {
