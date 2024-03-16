@@ -12,7 +12,7 @@ import application.component.consts.OtherMatchFlagConst;
 import application.logic.human.Computer;
 import application.logic.human.GameMaster;
 import application.logic.human.Player;
-import application.logic.human.gameComponent.GameComponentUtil;
+import application.logic.human.gameComponent.GameComponentMapUtil;
 import application.logic.info.Numer0nInfo;
 import application.logic.info.Numer0nNextAction;
 import application.logic.judge.Eatbite;
@@ -57,9 +57,9 @@ public class Numer0n {
 	private final CommonOptionImpl option;
 
 	/**
-	 * GameComponentUtil
+	 * GameComponentMapUtil
 	 */
-	private final GameComponentUtil utilMap;
+	private final GameComponentMapUtil utilMap;
 
 	/**
 	 * Numer0nNextAction
@@ -157,6 +157,9 @@ public class Numer0n {
 					this.info.addPlayerInfoList(Anything.concatStringToComma(
 							item, Const.HYPHEN));
 				}
+
+				// 候補を絞る
+				this.action.nextActionLogic();
 			}
 
 			// 攻守交代
