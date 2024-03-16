@@ -4,12 +4,21 @@
 <!-- <mapper namespace="NAMESPACE.RefusePersonInfoNameInsert01"> -->
 <mapper namespace="common.namespace">
 
-	<insert id="numeron_result_insert" parameterType="application.logic.db.dto.Numer0nInsertInputDTO">
+	<update id="numeron_result_select" parameterType="application.logic.db.dto.Numer0nResultSelectInputDTO">
 
-		INSERT INTO numeron (
-			id
-		)
+		SELECT
+			gameid,
+			userid,
+			get_info_num
+		FROM
+			numer0n_result r
+		JOIN
+			numer0n_user u
+		ON
+			r.userid = u.id
+		WHERE
+			u.name = #{name}
 
-	</insert
+	</update>
 
 </mapper>

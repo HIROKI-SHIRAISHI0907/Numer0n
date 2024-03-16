@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sqlMap定義-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http:://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="NAMESPACE.RefusePersonInfoNameInsert01"> -->
+<mapper namespace="common.namespace">
+
+	<insert id="numeron_result_insert" parameterType="application.logic.db.dto.Numer0nResultInsertInputDTO">
+
+		INSERT INTO numeron_result (
+			id,
+			name,
+			digit,
+			difficulty,
+			last_play_time,
+			valid_flg,
+			register_name,
+			register_time,
+			update_name,
+			update_time
+		)
+
+	</insert>
+
+</mapper>
