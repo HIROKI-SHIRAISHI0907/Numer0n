@@ -11,6 +11,7 @@
 			name,
 			digit,
 			difficulty,
+			play_count,
 			last_play_time,
 			valid_flg,
 			register_name,
