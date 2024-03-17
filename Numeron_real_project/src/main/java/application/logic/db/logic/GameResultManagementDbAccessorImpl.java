@@ -45,7 +45,7 @@ public class GameResultManagementDbAccessorImpl implements GameResultManagementD
 	 */
 	@Override
 	public Integer insertResultData(String dbAccessId, AbstractInputDTO dto) {
-		final String METHOD_NAME = "numer0nInsert";
+		final String METHOD_NAME = "insertResultData";
 
 		int cnt;
 		try {
@@ -64,7 +64,7 @@ public class GameResultManagementDbAccessorImpl implements GameResultManagementD
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Numer0nResultSelectOutputDTO> getResultData(String dbAccessId, AbstractInputDTO dto) {
-		final String METHOD_NAME = "numer0nSelectForObject";
+		final String METHOD_NAME = "getResultData";
 
 		List<Numer0nResultSelectOutputDTO> resultList = null;
 		try {

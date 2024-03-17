@@ -1,11 +1,11 @@
 package application.logic.db.dto;
 
 /**
- * 結果テーブル（numer0n_result）のDB情報取得DTO
+ * 結果テーブル（numer0n_result）のDB情報検索DTO
  * @author shiraishitoshio
  *
  */
-public class Numer0nResultSelectOutputDTO extends AbstractOutputDTO {
+public class Numer0nResultSelectInputDTO extends AbstractInputDTO {
 
 	/**
 	 * ユーザーID
